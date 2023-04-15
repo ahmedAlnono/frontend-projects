@@ -1,0 +1,267 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*::-webkit-scrollbar{
+    width:3px;
+}
+*::-webkit-scrollbar-corner{
+    background-color: blue;
+}
+samp{
+    color:#66656e;
+}
+v{
+    color:rgb(71, 120, 255);
+}
+s{
+    color:rgb(194, 252, 79);
+    text-decoration: none;
+}
+f{
+    color: purple;
+}
+g{
+    color:rgb(0, 179, 0);
+}
+mark{
+    color:black;
+    background-color: yellow;
+    padding:2px;
+}
+.container{
+    display:flex;
+}
+.grid{
+    display:grid;
+}
+aside{
+    height: 100dvh;
+    overflow-y:auto;
+    width:150px;
+    background-color: rgb(33, 33, 41);
+}
+aside li{
+    margin:4px;
+    background-color: rgb(56, 56, 90);
+    padding:10px;
+    cursor: pointer;
+}
+aside li:hover{
+    background-color: rgb(0, 165, 0);
+}
+aside li.active{
+    background-color: rgb(0, 165, 0);
+}
+.nav-icon{
+    display:none;
+}
+ol li{
+    margin-left:20px;
+    padding:4px 10px;
+}
+ol{
+    margin-bottom:20px;
+}
+.container section{
+    background-color: rgb(11, 14, 20);
+    width:calc(100dvw - 150px);
+    height: 100dvh;
+    display:none;
+    padding:14px;
+    overflow-y:auto;
+}
+section.active{
+    display:block;
+}
+section div{
+    width:80%;
+    margin:0 auto;
+}
+h1{
+    font-size:40px;
+}
+.cli{
+    background-color: rgb(59, 59, 73);
+    padding:10px;
+    border-radius: 20px;
+    margin-bottom:20px;
+}
+.cli span{
+    display:block;
+    background-color: black;
+    padding:10px 20px;
+    width:100%;
+    position:relative;
+}
+.cli span::before{
+    content: "";
+    background-color: rgb(133, 133, 173);
+    width:4px;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:50%;
+    translate:0 -50%;
+}
+.code{
+    background-color: rgb(54, 54, 82);
+    padding:15px;
+    border-radius: 10px;
+    margin-bottom:20px;
+}
+.code h2{
+    background-color: black;
+    padding:15px 20px;
+    position: relative;
+    overflow-x:auto;
+    font-weight: 400;
+}
+h2{
+    overflow-x:auto;
+}
+.code h2::before{
+    content:"";
+    position: absolute;
+    height: 100%;
+    width:5px;
+    background-color: green;
+    top:50%;
+    left:0;
+    translate:0 -50%;
+}
+.error::after{
+    content:"";
+    position: absolute;
+    height: 100%;
+    background-color: red;
+    width:5px;
+    top:50%;
+    left:0;
+    translate:0 -50%;
+    z-index: 4;
+}
+em{
+    color:transparent;
+}
+p{
+    margin-bottom:20px;
+}
+h1, h3 , h4{
+    margin-bottom: 30px;
+    margin-top:10px;
+}
+.list{
+    margin-left:30px;
+}
+.list li{
+    padding:7px 20px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #201f38;
+}
+ul h2{
+    text-align: center;
+    margin-top:20px;
+}
+section div h4{
+    line-height: 2;
+}
+.oop-ex{
+    background-color: #2b26b6;
+    display:flex;
+    padding:10px;
+    gap:10px;
+}
+.oop-ex div{
+    background-color:#201f38;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:800px) {
+    aside{
+        position: absolute;
+        top:50%;
+        right: 400px;
+        translate: 0 -50%;
+        animation-duration: 300ms;
+        animation-fill-mode: forwards;
+    }
+    aside[expand=false]{
+        animation-name: unexpand;
+    }
+    aside[expand=true]{
+        z-index:4;
+        animation-name: expand;
+    }
+    section.active{
+        width:100dvw;
+        padding:4px;
+        z-index:1;
+    }
+    section div{
+        width:100%;
+    }
+    .code h2 , .code h2 pre{
+        font-size:14px;
+    }
+    .code{
+        padding:5px;
+    }
+    .nav-icon{
+        display:block;
+        position: absolute;
+        right:1%;
+        top:0;
+        background-color: white;
+        z-index:99;
+        cursor: pointer;
+        padding:4px;
+        border-radius: 50%;
+    }
+    .nav-icon span{
+        display:block;
+        background-color:black;
+        width:90%;
+        height: 12px;
+        margin:3px auto;
+        padding:14px;
+        border-radius: 50%;
+
+    }
+}
+@keyframes expand {
+    from{
+        position:absolute;
+        right:400px;
+    }to{
+        position:absolute;
+        right:0px;
+    }
+}
+@keyframes unexpand {
+    from{
+        position: absolute;
+        right: 0;
+    }to{
+        position:absolute;
+        right:400px;
+    }
+}

@@ -1,0 +1,2134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Lesson</title>
+    <link rel="stylesheet" href="input.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-icon">
+            <span></span>
+        </div>
+        <aside expand="false" class="">
+            <ul>
+                <li class="start">Get Started</li>
+                <li class="syntax">Java Syntax</li>
+                <li class="output">Java Output</li>
+                <li class="comment">Java Comment</li>
+                <li class="variables active">Java Variables</li>
+                <li class="data-types">Data Types</li>
+                <li class="operator">Java Operator</li>
+                <li class="string">Java String</li>
+                <li class="math">Java Math</li>
+                <li class="boolean">Boolean</li>
+                <li class="if-else">If Else</li>
+                <li class="while-loop">While Loop</li>
+                <li class="for-loop">For Loop</li>
+                <li class="array">Arrays</li>
+                <hr>
+                <h2>Java Method</h2>
+                <li class="method">Java Method</li>
+                <li class="method-overloading">Method OverLoading</li>
+                <li class="scoope">Scoope</li>
+                <li class="recursion">Recursion</li>
+                <h2>Java OOP</h2>
+                <li class="java-oop">OOP</li>
+                <li class="class-object">Class/Object</li>
+                <li class="oop-attribute">Attribute</li>
+                <li class="oop-method">Method</li>
+                <li class="constructor">Constructor</li>
+            </ul>
+        </aside>
+            <section id="start" class="">
+                <div>
+                    <h1>Java Install</h1>
+                    
+                    <h4>Some PCs might have Java already installed.</h4>
+                    
+                    <h4>To check if you have Java installed on a Windows PC, search in the start bar for Java or type the following in Command Prompt (cmd.exe):</h4>
+                </div>
+                
+                <div class="cli">
+                    <span>C:\Users\Your Name>java -version</span>
+                </div>
+                <div>
+                    <h4>If Java is installed, you will see something like this (depending on version):</h4>
+                </div>
+                
+                <div class="cli">
+                    <span>java version "11.0.1" 2018-10-16 LTS</span>
+                    <span>Java(TM) SE Runtime Environment 18.9 (build 11.0.1+13-LTS)</span>
+                    <span>Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.1+13-LTS, mixed mode)</span>
+                </div>
+                
+                <div>
+                    <p>If you do not have Java installed on your computer, you can download it for free at oracle.com.</p>
+                    <p><mark>Note:</mark> In this tutorial, we will write Java code in a text editor. However, it is possible to write Java in an Integrated Development Environment, such as IntelliJ IDEA, Netbeans or Eclipse, which are particularly useful when managing larger collections of Java files.</p>
+                    
+                    <hr>
+                    <h1>Setup for Windows</h1>
+                    <p>To install Java on Windows:</p>
+                    <p>1. Go to "System Properties" (Can be found on Control Panel > System and Security > System > Advanced System Settings)</p>
+                    <p>2. Click on the "Environment variables" button under the "Advanced" tab</p>
+                    <p>3. Then, select the "Path" variable in System variables and click on the "Edit" button</p>
+                    <p>4. Click on the "New" button and add the path where Java is installed, followed by \bin. By default, Java is installed in C:\Program Files\Java\jdk-11.0.1 (If nothing else was specified when you installed it). In that case, You will have to add a new path with: C:\Program Files\Java\jdk-11.0.1\bin
+                        Then, click "OK", and save the settings</p>
+                    <p>5. At last, open Command Prompt (cmd.exe) and type java -version to see if Java is running on your machine
+                    </p>
+                </div>
+                <hr><br><br><hr>
+                <div>
+                    <h1>Java Quickstart</h1>
+                    <p>In Java, every application begins with a <g> class </g>name, and that <g> class </g>must match the filename.</p> 
+                    <p>Let's create our first Java file, called Main.java, which can be done in any text editor (like Notepad).</p> 
+                    <p>The file should contain a "Hello World" message, which is written with the following code:</p> 
+                    <nav class="code">
+                        <p>Main.java</p>
+                        
+                        <h2>
+                            <v>public </v><g> class </g>Main{
+                            <em>..</em><v>public </v>static <v> void </v> main(<g>String</g>[] args) {
+                            <em>....</em><g>System.</g><v>out.</v><s>println</s>("Hello World");
+                               <em>.....</em>} 
+                            } 
+                        </h2>
+                    </nav>
+                    <p>Don't worry if you don't understand the code above - we will discuss it in detail in later chapters. For now, focus on how to run the code above.</p>
+                    
+                    <p>Save the code in Notepad as "Main.java". Open Command Prompt (cmd.exe), navigate to the directory where you saved your file, and type "javac Main.java":</p>
+                </div>
+                <div class="cli">
+                    <span>C:\Users\Your Name>javac Main.java</span>
+                </div>
+                <div>
+                    <p>This will compile your code. If there are no errors in the code, the command prompt will take you to the next line. Now, type "java Main" to run the file:</p>
+                </div>
+                <div class="cli">
+                    <span>C:\Users\Your Name>java Main</span>
+                </div>
+                <div>
+                    <p>The output should read:</p>
+                </div>
+                <div class="cli">
+                    <span>Hello World</span>
+                </div>
+                <div>
+                    <p>Congratulations! You have written and executed your first Java program.</p>
+                </div>
+                
+            </section>
+            <!-- finish Quick start for java -->
+<!-- ############## -->
+            <section id="syntax" class="">
+                <div>
+                    <h1>Java Syntax</h1>
+                    <p>In the previous chapter, we created a Java file called Main.java, and we used the following code to print "Hello World" to the screen:</p>
+                    <nav class="code">
+                        <p>Main.java</p>
+                        <h2><v>public </v><g> class </g>Main { 
+                            <em>..</em><v>public </v>static <v> void </v> main(<g>String</g>[] args) { 
+                            <em>....</em><g>System.</g><v>out.</v><s>println</s>("Hello World"); <br>
+                            } <br>
+                          } </h2>
+                    </nav>
+                    <h3>Example explained</h3>
+                    <p>Every line of code that runs in Java must be inside a class. In our example, we named the <g> class </g>Main. A <g> class </g>should always start with an upper<f></f>case</f>first letter.</p>
+                    <p><strong>Note:</strong> Java is case-sensitive: "MyClass" and "myclass" has different meaning.</p>
+                    <p>The name of the java file must match the <g> class </g>name. When saving the file, save it using the <g> class </g>name and add ".java" to the end of the filename. To run the example above on your computer, make sure that Java is properly installed: Go to the Get Started Chapter for how to install Java. The output should be:</p>
+                </div>
+                <div class="cli">
+                    <span>Hello World</span>
+                    <hr>
+                </div>
+                <div>
+                    <h1>The main method</h1>
+                    <code>
+                       <h2><v>public </v>static <v> void </v> main(<g>String</g>[] args)</h2>
+                    </code>
+                    <p>Any code inside the main() method will be executed. Don't worry about the keywords before and after main. You will get to know them bit by bit while reading this tutorial.</p>
+                    <p>For now, just remember that every Java program has a <g> class </g>name which must match the filename, and that every program must contain the main() method.</p>
+                    <hr>
+                    <h1><g>System.</g><v>out.</v><s>println</s>()</h1>
+                    <p>Inside the main() method, we can use the println() method to print a line of text to the screen:</p>
+                    <nav class="code">
+                        <h2><v>public </v>static <v> void </v> main(<g>String</g>[] args) { <br>
+                           <em>...</em> <g>System.</g><v>out.</v><s>println</s>("Hello World"); <br>
+                          }
+                        </h2>
+                    </nav>
+                </div>
+            </section>
+            <section id="output" class="">
+                <div>
+                    <h1>Print Text</h1>
+                    <h3>You learned from the previous chapter that you can use the println() method to output values or print text in Java:</h3>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>System.</g><v>out.</v><s>println</s>("Hello World!");</h2>
+                    </nav>
+                    <p>You can add as many println() methods as you want. Note that it will add a new line for each method:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>System.</g><v>out.</v><s>println</s>("Hello World!");<br>
+                            <g>System.</g><v>out.</v><s>println</s>("I am learning Java.");<br>
+                            <g>System.</g><v>out.</v><s>println</s>("It is awesome!");<br></h2>
+                    </nav>
+                    <hr>
+                    <h1>Double Quotes</h1>
+                    <p>When you are working with text, it must be wrapped inside double quotations marks "".</p>
+                    <p>If you forget the double quotes, an error occurs:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>System.</g><v>out.</v><s>println</s>("This sentence will work!");</h2>
+                        <br>
+                        <h2 class="error"><g>System.</g><v>out.</v><s>println</s>(This sentence will produce an error);</h2>
+                    </nav>
+                    <hr>
+                    <h1>The Print() Method</h1>
+                    <p>There is also a print() method, which is similar to println().</p>
+                    <p>The only difference is that it does not insert a new line at the end of the output:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>System.</g><v>out.</v><s>println</s>Hello World! ");</h2><br>
+                        <h2><g>System.</g><v>out.</v><s>println</s>I will print on the same line.");</h2>
+                    </nav>
+                    <p>Note that we add an extra space (after "Hello World!" in the example above), for better readability.</p>
+                </div>
+            </section>
+            <section id="comment" class="">
+                <div>
+                    <h1>Java Comments</h1>
+                    <h3>Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.</h3>
+                    <hr><br><br><br>
+                    <h1>Single-line Comments</h1>
+                    <p>Single-line comments start with two forward slashes (//).</p>
+                    <p>Any text between // and the end of the line is ignored by Java (will not be executed).</p>
+                    <p>This example uses a single-line comment before a line of code:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>
+                            <samp>// This is a comment </samp><br>
+                            <g>System.</g><v>out.</v><s>println</s>("Hello World");
+                        </h2>
+                    </nav>
+                    <p>This example uses a single-line comment at the end of a line of code:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>System.</g><v>out.</v><s>println</s>("Hello World");<samp>// This is a comment</samp></h2>
+                    </nav>
+                    <hr><br><br><hr>
+                    <h1>Java Multi-line Comments</h1>
+                    <p>Multi-line comments start with /* and ends with */.</p>
+                    <p>Any text between /* and */ will be ignored by Java.</p>
+                    <p>This example uses a multi-line comment (a comment block) to explain the code:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><samp>/* The code below will print the words Hello World <br>
+                            to the screen, and it is amazing */</samp> <br>
+                            <g>System.</g><v>out.</v><s>println</s>("Hello World"); <br></h2>
+                    </nav>
+
+                </div>
+            </section>
+            <section id="variables" class="active">
+                <div>
+                    <h1>variables</h1>
+                    <p>Variables are containers for storing data values.</p>
+                    <p>In Java, there are different types of variables, for example:</p>
+                    <ol>
+                        <li><g>String</g> - stores text, such as "Hello". <g>String</g> values are surrounded by double quotes</li>
+                        <li><v>int </v>- stores integers (whole numbers), without decimals, such as 123 or -123</li>
+                        <li><v>float </v>- stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+                        <li><v>char </v>- stores single characters, such as 'a' or 'B'. <v>char </v>values are surrounded by single quotes</li>
+                        <li><v>boolean </v>- stores values with two states: true or false</li>
+                    </ol>
+                    <hr>
+                    <h1>Declaring (Creating) Variables</h1>
+                    <p>To create a variable, you must specify the type and assign it a value:</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2>type variableName = value;</h2>
+                    </nav>
+                    <p>Where type is one of Java's types (such as <v>int </v>or <g>String</g>), and variableName is the name of the variable (such as x or name). The equal sign is used to assign values to the variable.</p>
+                    <p>To create a variable that should store text, look at the following example:</p>
+                    <nav class="code">
+                        <h4>Example</h4>
+                        <p>Create a variable called name of type <g>String</g> and assign it the value "John":</p>
+                        <h2><g>String</g> name = "John"; <br>
+                            <g>System.</g><v>out.</v><s>println</s>(name);</h2>
+                    </nav>
+                    <p>To create a variable that should store a number, look at the following example:</p>
+                    <nav class="code">
+                        <h4>Example</h4>
+                        <p>Create a variable called myNum of type <v>int </v>and assign it the value 15:</p>
+                        <h2><v>int </v>myNum = 15; <br>
+                            <g>System.</g><v>out.</v><s>println</s>(myNum);</h2>
+                    </nav>
+                    <p>You can also declare a variable without assigning the value, and assign the value later:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>int </v>myNum; <br>
+                            myNum = 15; <br>
+                            <g>System.</g><v>out.</v><s>println</s>(myNum);</h2>
+                    </nav>
+                    <p>Note that if you assign a new value to an existing variable, it will overwrite the previous value:</p>
+                    <nav class="code">
+                        <h4>Example</h4>
+                        <p>Change the value of myNum from 15 to 20:</p>
+                        <h2><v>int </v>myNum = 15; <br>
+                            myNum = 20;  <samp>// myNum is now 20</samp><br>
+                            <g>System.</g><v>out.</v><s>println</s>(myNum);</h2>
+                    </nav>
+                    <br><br><hr><br>
+                    <h1>Final Variables</h1>
+                    <p>If you don't want others (or yourself) to overwrite existing values, use the final keyword (this will declare the variable as "final" or "constant", which means unchangeable and read-only):</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2 class="error">
+                            final <v>int </v>myNum = 15;<br>
+                            myNum = 20;<samp>// will generate an error: cannot assign a value to a final variable</samp>
+                        </h2>
+                    </nav>
+                    <br><hr>
+                    <h1>Other Types</h1>
+                    <p>A demonstration of how to declare variables of other types:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>int </v>myNum = 5;<br>
+                            <v>float </v>myFloatNum = 5.99f;<br>
+                            <v>char </v>myLetter = 'D';<br>
+                            <v>boolean </v>myBool = true;<br>
+                            <g>String</g> myText = "Hello";
+                        </h2>
+                    </nav>
+                    <mark>You will learn more about data types in the next section.</mark>
+                    <h1>Display Variables</h1>
+                    <p>The println() method is often used to display variables.</p>
+                    <p>To combine both text and a variable, use the + character:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>String</g> name = "John";<br>
+                            <g>System.</g><v>out.</v><s>println</s>("Hello " + name);</h2>
+                    </nav>
+                    <p>You can also use the + character to add a variable to another variable:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>String</g> firstName = "John ";<br>
+                            <g>String</g> lastName = "Doe";<br>
+                            <g>String</g> fullName = firstName + lastName;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(fullName);</h2>
+                    </nav>
+                    <p>For numeric values, the + character works as a mathematical operator (notice that we use <v>int </v>(integer) variables here):</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>int </v>x = 5;<br>
+                            <v>int </v>y = 6;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(x + y);<samp> // Print the value of x + y</samp></h2>
+                    </nav>
+                    <p>From the example above, you can expect:</p>
+                    <ul class="list">
+                        <li>x stores the value 5</li>
+                        <li>y stores the value 6</li>
+                        <li>Then we use the println() method to display the value of x + y, which is 11</li>
+                    </ul>
+                    <h1>Declare Many Variables</h1>
+                    <p>To declare more than one variable of the same type, you can use a comma-separated list:</p>
+                    <nav class="code">
+                        <h4>Example</h4>
+                        <p>Instead of writing:</p>
+                        <h2><v>int </v>x = 5;<br>
+                            <v>int </v>y = 6;<br>
+                            <v>int </v>z = 50;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(x + y + z);</h2>
+                            <br><br>
+                        <p>You can simply write:</p>
+                        <h2><v>int </v>x = 5, y = 6, z = 50;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(x + y + z);</h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>One Value to Multiple Variables</h1>
+                    <p>You can also assign the same value to multiple variables in one line:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>int </v>x, y, z;<br>
+                            x = y = z = 50;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(x + y + z);</h2>
+                    </nav>
+                    <h1>Identifiers</h1>
+                    <p>All Java variables must be identified with unique names.</p>
+                    <p>These unique names are called identifiers.</p>
+                    <p>Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).</p>
+                    <p>Note: It is recommended to use descriptive names in order to create understandable and maintainable code:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><samp>// Good</samp><br>
+                            <v>int </v>minutesPerHour = 60;<br>
+                            <samp>// OK, but not so easy to understand what m actually is</samp><br>
+                            <v>int </v>m = 60;</h2>
+                    </nav>
+                    <p>The general rules for naming variables are:</p>
+                    <ul class="list">
+                        <li>Names can contain letters, digits, underscores, and dollar signs
+                        </li>
+                        <li>Names must begin with a letter</li>
+                        <li>Names should start with a lower<f>case</f>letter and it cannot contain whitespace</li>
+                        <li>Names can also begin with $ and _ (but we will not use it in this tutorial)</li>
+                        <li>Names are <f>case</f>sensitive ("myVar" and "myvar" are different variables)</li>
+                        <li>Reserved words (like Java keywords, such as <v>int </v>or boolean) cannot be used as names</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="data-types">
+                <div>
+                    <h1>Java Data Types</h1>
+                    <p>As explained in the previous chapter, a variable in Java must be a specified data type:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>int </v>myNum = 5;               
+                            <samp>// Integer (whole number)</samp><br>
+                            <v>float </v>myFloatNum = 5.99f;
+                            <samp>// Floating point number</samp><br>
+                            <v>char </v>myLetter = 'D';
+                            <samp>// Character</samp><br>
+                            <v>boolean </v>myBool = true;
+                            <samp>// Boolean</samp><br>
+                            <g>String</g> myText = "Hello"; 
+                            <samp>// <g>String</g></samp><br>
+                        </h2>
+                    </nav>
+                    <p>Data types are divided into two groups:</p>
+                    <ul class="list">
+                        <li>Primitive data types - includes byte, short, int, long, float, double, <v>boolean </v>and char</li>
+                        <li>Non-primitive data types - such as <g>String</g>, Arrays and Classes (you will learn more about these in a later chapter)</li>
+                    </ul>
+                    <hr><br><br>
+                    <h1>Primitive Data Types</h1>
+                    <p>A primitive data type specifies the size and type of variable values, and it has no additional methods.</p>
+                    <p>There are eight primitive data types in Java:</p>
+                </div>
+                <div>
+                    <table>
+                            <tr>
+                                <td>Data Type</td>
+                                <td>Size</td>
+                                <td>Description</td>
+                            </tr>
+                            <tr>
+                                <td>byte</td>
+                                <td>1 byte</td>
+                                <td>Stores whole numbers from -128 to 127</td>
+                            </tr>
+                            <tr>
+                                <td>short</td>
+                                <td>2 byte</td>
+                                <td>Stores whole numbers from -32,768 to 32,767</td>
+                            </tr>
+                            <tr>
+                                <td>int</td>
+                                <td>4 byte</td>
+                                <td>Stores whole numbers from -2,147,483,648 to 2,147,483,647</td>
+                            </tr>
+                            <tr>
+                                <td>long</td>
+                                <td>8 byte</td>
+                                <td>Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+                            </tr>
+                            <tr>
+                                <td>float</td>
+                                <td>4 byte</td>
+                                <td>Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits</td>
+                            </tr>
+                            <tr>
+                                <td>double</td>
+                                <td>8 byte</td>
+                                <td>Stores fractional numbers. Sufficient for storing 15 decimal digits</td>
+                            </tr>
+                            <tr>
+                                <td>boolean</td>
+                                <td>1 bit</td>
+                                <td>Stores true or false values</td>
+                            </tr>
+                            <tr>
+                                <td>char</td>
+                                <td>2 byte</td>
+                                <td>Stores a single character/letter or ASCII values</td>
+                            </tr>
+                    </table>
+                    <hr><br><br>
+                    <h1>Numbers</h1>
+                    <p>Primitive number types are divided into two groups:</p>
+                    <p>Integer types stores whole numbers, positive or negative (such as 123 or -456), without decimals. Valid types are byte, short, <v>int </v>and long. Which type you should use, depends on the numeric value.</p>
+                    <p>Floating point types represents numbers with a fractional part, containing one or more decimals. There are two types: <v>float </v>and double.</p>
+                    <br><br>
+                    <h1>Integer Types</h1>
+                    <h2>Byte</h2>
+                    <p>The byte data type can store whole numbers from -128 to 127. This can be used instead of <v>int </v>or other integer types to save memory when you are certain that the value will be within -128 and 127:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>byte myNum = 100;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(myNum);</h2>
+                    </nav>
+                    <h2>Short</h2>
+                    <p>The short data type can store whole numbers from -32768 to 32767:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>short myNum = 5000;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(myNum);</h2>
+                    </nav>
+                    <h2>Int</h2><br><br>
+                    <p>The <v>int </v>data type can store whole numbers from -2147483648 to 2147483647. In general, and in our tutorial, the <v>int </v>data type is the preferred data type when we create variables with a numeric value.</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>int </v>myNum = 100000;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(myNum);</h2>
+                    </nav>
+                    <h2>Long</h2><br><br>
+                    <p>The long data type can store whole numbers from -9223372036854775808 to 9223372036854775807. This is used when <v>int </v>is not large enough to store the value. Note that you should end the value with an "L":</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>long myNum = 15000000000L;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(myNum);</h2>
+                    </nav>
+                    <h1>Floating Point Types</h1>
+                    <p>You should use a floating point type whenever you need a number with a decimal, such as 9.99 or 3.14515.</p>
+                    <p>The <v>float </v>and double data types can store fractional numbers. Note that you should end the value with an "f" for floats and "d" for doubles:</p>
+                    <nav class="code">
+                        <p><v>float </v>Example</p>
+                        <h2><v>float </v>myNum = 5.75f;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(myNum);</h2>
+                        <p>Double Example</p>
+                        <h2>double myNum = 19.99d;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(myNum);</h2>
+                    </nav>
+                    <h2>Scientific Numbers</h2><br><br>
+                    <p>A floating point number can also be a scientific number with an "e" to indicate the power of 10:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>float </v>f1 = 35e3f;<br>
+                            double d1 = 12E4d;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(f1);<br>
+                            <g>System.</g><v>out.</v><s>println</s>(d1);</h2>
+                    </nav><br><hr><br><hr><br>
+                    <h1><v>boolean </v>Types</h1>
+                    <p>Very often in programming, you will need a data type that can only have one of two values, like:</p>
+                    <ul class="list">
+                        <li>YES/NO</li>
+                        <li>ON/OFF</li>
+                        <li>TRUE/FALSE</li>
+                    </ul>
+                    <p>For this, Java has a <v>boolean </v>data type, which can only take the values true or false:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>boolean </v>isJavaFun = true;<br>
+                            <v>boolean </v>isFishTasty = false;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(isJavaFun); <samp>// Outputs true</samp> <br>
+                            <g>System.</g><v>out.</v><s>println</s>(isFishTasty);<samp> // Outputs false</samp></h2>
+                    </nav>
+                        <h1>Characters</h1>
+                        <p>The <v>char </v>data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':</p>
+                        <nav class="code">
+                            <p>Example</p>
+                            <h2><v>char </v>myGrade = 'B';<br>
+                                <g>System.</g><v>out.</v><s>println</s>(myGrade);</h2>
+                        </nav>
+                        <p>Alternatively, if you are familiar with ASCII values, you can use those to display certain characters:</p>
+                        <nav class="code">
+                            <p>Example</p>
+                            <h2><v>char </v>myVar1 = 65, myVar2 = 66, myVar3 = 67;<br>
+                                <g>System.</g><v>out.</v><s>println</s>(myVar1);<br>
+                                <g>System.</g><v>out.</v><s>println</s>(myVar2);<br>
+                                <g>System.</g><v>out.</v><s>println</s>(myVar3);</h2>
+                        </nav>
+                        <h1><g>String</g>s</h1>
+                        <p>The <g>String</g> data type is used to store a sequence of characters (text). <g>String</g> values must be surrounded by double quotes:</p>
+                        <nav class="code">
+                            <p>Example</p>
+                            <h2><g>String</g> greeting = "Hello World";<br>
+                                <g>System.</g><v>out.</v><s>println</s>(greeting);</h2>
+                        </nav>
+                        <h1>Non-Primitive Data Types</h1>
+                        <p>Non-primitive data types are called reference types because they refer to objects.</p>
+                        <p>The main difference between primitive and non-primitive data types are:</p>
+                        <ul class="list">
+                            <li>Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and is not defined by Java (except for <g>String</g>).</li>
+                            <li>Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.</li>
+                            <li>A primitive type has always a value, while non-primitive types can be null.</li>
+                            <li>A primitive type starts with a lower<f>case</f>letter, while non-primitive types starts with an upper<f>case</f>letter.
+                            </li>
+                            <li>The size of a primitive type depends on the data type, while non-primitive types have all the same size.</li>
+                        </ul>
+                        <p>Examples of non-primitive types are <g>String</g>s, Arrays, Classes, Interface, etc. You will learn more about these in a later chapter.</p>
+                        <br><hr><br><hr>
+                        <h1>Java Type Casting</h1>
+                        <p>Type casting is when you assign a value of one primitive data type to another type.</p>
+                        <p>In Java, there are two types of casting:</p>
+                        <ul class="list">
+                            <li>Widening Casting (automatically) - converting a smaller type to a larger type size <br>
+                                byte -> short -> <v>char </v>-> <v>int </v>-> long -> <v>float </v>-> double
+                                </li>
+                                <li>Narrowing Casting (manually) - converting a larger type to a smaller size type <br>
+                                    double -> <v>float </v>-> long -> <v>int </v>-> <v>char </v>-> short -> byte</li>
+                        </ul>
+                        <br><hr><br>
+                        <h1>Widening Casting</h1>
+                        <p>Widening casting is done automatically when passing a smaller size type to a larger size type:</p>
+                        <nav class="code">
+                            <p>Example</p>
+                            <h2><v>public </v><g> class </g>Main {<br>
+                                <v>public </v>static <v> void </v> main(<g>String</g>[] args) {<br>
+                                <em>....</em><v>int </v>my<v>Int </v>= 9;<br>
+                                <em>....</em>double myDouble = myInt; <samp>// Automatic casting: <v>int </v>to double</samp> <br><br>
+                                  <g>System.</g><v>out.</v><s>println</s>(myInt);   <samp>// Outputs   9</samp><br>
+                                  <g>System.</g><v>out.</v><s>println</s>(myDouble);<samp>// Outputs 9.0</samp><br>
+                                }<br>
+                              }
+                              </h2>
+                        </nav>
+                        <br><hr><br>
+                        <h1>Narrowing Casting</h1>
+                        <p>Narrowing casting must be done manually by placing the type in parentheses in front of the value:</p>
+                        <nav class="code">
+                            <p>Example</p>
+                            <h2><v>public </v><g> class </g>Main { <br>
+                                <v>public </v>static <v> void </v> main(<g>String</g>[] args) {<br>
+                                  double myDouble = 9.78d;<br>
+                                  <v>int </v>my<v>Int </v>= (int) myDouble; <samp>// Manual casting: double to int</samp><br><br>
+                                  <g>System.</g><v>out.</v><s>println</s>(myDouble);<samp>// Outputs 9.78</samp><br>
+                                  <g>System.</g><v>out.</v><s>println</s>(myInt);   <samp>// Outputs    9</samp>
+                                } <br>
+                              }</h2>
+                        </nav>
+                </div>
+            </section>
+            <section id="operator">
+               <div>
+                <h1>Java Operators</h1>
+                <p>Operators are used to perform operations on variables and values. <br><br>
+
+                    In the example below, we use the + operator to add together two values:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>int </v>x = 100 + 50;</h2>
+                    </nav>
+                    <p>Although the + operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value, or a variable and another variable:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>
+                            <v>int </v>sum1 = 100 + 50;    <samp>// 150 (100 + 50 )</samp><br>
+                            <v>int </v>sum2 = sum1 + 250;  <samp>// 400 (150 + 250)</samp><br>
+                            <v>int </v>sum3 = sum2 + sum2; <samp>// 800 (400 + 400)</samp>
+                            </h2>
+                    </nav>
+                    <p>Java divides the operators into the following groups:</p>
+                    <ul class="list">
+                        <li>Arithmetic operators</li>
+                        <li>Assignment operators</li>
+                        <li>Comparison operators</li>
+                        <li>Logical operators</li>
+                        <li>Bitwise operators</li>
+                    </ul>
+                    <hr><br><br>
+                    <h1>Arithmetic Operators</h1>
+                    <p>Arithmetic operators are used to perform common mathematical operations.</p>
+                    <table>
+                        <tr>
+                            <td>Operator</td>
+                            <td>Name</td>
+                            <td>Description</td>
+                            <td>Example</td>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>Addition</td>
+                            <td>Adds together two values</td>
+                            <td>x + y</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Subtraction</td>
+                            <td>Subtracts one value from another</td>
+                            <td>x - y</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplication</td>
+                            <td>Multiplies two values</td>
+                            <td>x * y</td>
+                        </tr>	
+                        <tr>
+                            <td>/</td>
+                            <td>Division</td>
+                            <td>Divides one value by another</td>
+                            <td>x / y</td>
+                        </tr>	
+                        <tr>
+                            <td>%</td>
+                            <td>Modulus</td>
+                            <td>Returns the division remainder</td>
+                            <td>x % y</td>
+                        </tr>	
+                        <tr>
+                            <td>++</td>
+                            <td>Increment</td>
+                            <td>Increases the value of a variable by 1</td>
+                            <td>++x</td>
+                        </tr>
+                        <tr>
+                            <td>--</td>
+                            <td>Decrement</td>
+                            <td>Decreases the value of a variable by 1</td>
+                            <td>--x</td>
+                        </tr>
+                    </table>
+                    <h1>Java Assignment Operators</h1>
+                    <p>Assignment operators are used to assign values to variables. <br>
+                        In the example below, we use the assignment operator (=) to assign the 10 to a variable called x:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>int </v>x = 10;</h2>
+                    </nav>
+                    <p>The addition assignment operator (+=) adds a value to a variable:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>int </v>x = 10; <br>
+                            x += 5;</h2>
+                    </nav>
+                    <p>A list of all assignment operators:</p>
+                    <table><tr> <td>Operator</td> <td>Example</td> <td>Same as</td>
+                        </tr><tr> <td>    =</td> <td>x = 5</td>	 <td>x = 5</td>	
+                        </tr><tr> <td>+=</td> <td>x +=  3</td> <td>x = x +  3 </td>	
+                        </tr><tr> <td>-=</td> <td>x -=  3</td> <td>x = x -  3 </td>	
+                        </tr><tr> <td>*=</td> <td>x *=  3</td> <td>x = x *  3</td>
+                        </tr><tr> <td>/=</td> <td>x /=  3</td> <td>x = x /  3 	</td>
+                        </tr><tr> <td>%=</td> <td>x %=  3</td> <td>x = x %  3 </td>	
+                        </tr><tr> <td>&=</td> <td>x &=  3</td> <td>x = x &  3 	</td>
+                        </tr><tr> <td>|=</td> <td>x |=  3</td> <td>x = x |  3 	</td>
+                        </tr><tr> <td>^=</td> <td>x ^=  3</td> <td>x = x ^  3 	</td>
+                        </tr><tr> <td>>>=</td> <td>x >>= 3</td> <td>x = x >> 3</td>
+                        </tr><tr> <td>&lt;&lt;=</td> <td>x &lt;&lt;= 3</td> <td>x = x &lt;&lt; 3</td>
+                        </tr>
+                    </table>
+                    <h1>Java Comparison Operators</h1>
+                    <p>Comparison operators are used to compare two values (or variables). This is important in programming, because it helps us to find answers and make decisions. <br></p>
+                    <p>The return value of a comparison is either true or false. These values are known as <v>boolean </v>values, and you will learn more about them in the Booleans and If..Else chapter.</p>
+                    <p>In the following example, we use the greater than operator (>) to find out if 5 is greater than 3:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>int </v>x = 5; <br>
+                            <v>int </v>y = 3; <br>
+                            <g>System.</g><v>out.</v><s>println</s>(x > y);  <br>
+                            <samp>// returns true, because 5 is higher than 3</samp></h2>
+                    </nav>
+                    <table><tr><td>Operator</td><td>Name</td><td>Example</td></tr><tr><td>==</td>	<td>Equal to</td> <td>x == y</td>	</tr><tr><td>!=</td>	<td>Not equal</td>  <td>x != y</td>	</tr><tr><td> ></td>	<td>Greater than</td> <td>x > y	</td></tr><tr><td> &lt;</td>	<td>Less than</td>  <td>x &lt; y	</td></tr><tr><td>>=</td>	<td>Greater than or equal to</td>	<td>x >= y</td>	</tr><tr><td>&lt;=</td>	<td>Less than or equal to</td>  <td>x &lt;= y</td></tr>
+                    </table>
+                    <h1>Java Logical Operators</h1>
+                    <p>You can also test for true or false values with logical operators. <br>
+                        Logical operators are used to determine the logic between variables or values:</p>
+                    <table>
+                        <tr><td>Operator</td><td>Description</td><td>Example</td></tr>
+                        <tr><td>&&</td><td>Logical and	Returns true if both statements are true</td><td>x < 5 &&  x < 10</td>
+                        </tr>
+                        <tr><td>||</td><td>Logical or	Returns true if one of the statements is true</td><td>x < 5 || x < 4</td>
+                        </tr>
+                        <tr><td>!</td><td>Logical not	Reverse the result, returns false if the result is true</td><td>!(x < 5 && x < 10)</td></tr>
+                    </table>
+               </div>
+            </section>
+            <section id="string">
+                <div>
+                    <h1>Java <g>String</g>s</h1>
+                    <p><g>String</g>s are used for storing text. <br><br><br>
+                        A <g>String</g> variable contains a collection of characters surrounded by double quotes:</p>
+                    <nav class="code">
+                        <h4>Example</h4>
+                        <p>Create a variable of type <g>String</g> and assign it a value:</p>
+                        <h2><g>String</g> greeting = "Hello";</h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1><g>String</g> Length</h1>
+                    <p>A <g>String</g> in Java is actually an object, which contain methods that can perform certain <br> operations on <g>String</g>s. For example, the length of a <g>String</g> can be found with the length() method: <br>
+                    </p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>String</g> txt = "ABCD"; <br>
+                            <g>System.</g><v>out.</v><s>println</s>("lenght is: "+ txt.length());</h2>
+                    </nav>
+                    <h1>More <g>String</g> Methods</h1>
+                    <p>There are many <g>String</g> methods available, for example toUpperCase() and toLowerCase():</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>String</g> txt = "Hello World"; <br>
+                            <g>System.</g><v>out.</v><s>println</s>(txt.toUpperCase());<br> <samp>// Outputs "HELLO WORLD"</samp> <br>
+                            <g>System.</g><v>out.</v><s>println</s>(txt.toLowerCase());<br><samp>// Outputs "hello world"</samp></h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Finding a Character in a <g>String</g></h1>
+                    <p>The indexOf() method returns the index (the position) of the first occurrence of a specified text in a <g>String</g> (including whitespace):</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>String</g> txt = "find'locate'"; <br>
+                            <g>System.</g><v>out.</v><s>println</s>(txt.indexOf("locate")); <samp>// Outputs 5</samp></h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Complete <g>String</g> Reference</h1>
+                    <p>For a complete reference of <g>String</g> methods, go to our Java <g>String</g> Methods Reference. <br><br>
+                    The reference contains descriptions and examples of all <g>String</g> methods.</p>
+                    <hr><br><br>
+                    <h1><g>String</g> Concatenation</h1>
+                    <p>The + operator can be used between <g>String</g>s to combine them. This is called concatenation:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>String</g> firstName = "John"; <br>
+                            <g>String</g> lastName = "Doe";<br>
+                            <g>System.</g><v>out.</v><s>println</s>(firstName + " " + lastName);</h2>
+                    </nav>
+                    <p>You can also use the concat() method to concatenate two <g>String</g>s:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>String</g> firstName = "John ";<br>
+                            <g>String</g> lastName = "Doe";<br>
+                            <g>System.</g><v>out.</v><s>println</s>(firstName.concat(lastName));</h2>
+                    </nav><hr><br><br>
+                    <h1>Adding Numbers and <g>String</g>s</h1>
+                    <p> <mark>WARNING!!!</mark><br><br>
+                        Java uses the + operator for both addition and concatenation. <br>
+                        
+                        Numbers are added. <g>String</g>s are concatenated.</p>
+                        <p>If you add two numbers, the result will be a number:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>int </v>x = 10;<br>
+                            <v>int </v>y = 20;<br>
+                            <v>int </v>z = x + y; <br><samp>// z will be 30 (an integer/number)</samp></h2>
+                    </nav>
+                    <p>If you add two <g>String</g>s, the result will be a <g>String</g> concatenation:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>String</g> x = "10";<br>
+                            <g>String</g> y = "20";<br>
+                            <g>String</g> z = x + y;<br><samp>// z will be 1020 (a <g>String</g>)</samp></h2>
+                    </nav>
+                    <p>If you add a number and a <g>String</g>, the result will be a <g>String</g> concatenation:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>String</g> x = "10";<br>
+                            <v>int </v>y = 20;<br>
+                            <g>String</g> z = x + y;<br><samp>// z will be 1020 (a <g>String</g>)</samp>
+                        </h2>
+                    </nav>
+                    <h1><g>String</g>s - Special Characters</h1>
+                    <p>Because <g>String</g>s must be written within quotes, Java will misunderstand this <g>String</g>, and generate an error:</p>
+                    <nav class="code">
+                            <h2 class="error"><g>String</g> txt = "We are "Vikings" the north.";</h2>
+                    </nav>
+                    <p>The solution to avoid this problem, is to use the backslash escape character. <br><br>
+                        The backslash (\) escape character turns special characters into <g>String</g> characters:</p>
+                    <table>
+                        <tr><td>Escape character</td><td>Result</td><td>Description</td></tr>
+                        <tr><td>\'</td><td>'</td><td>Single quote</td></tr>
+                        <tr><td>\"</td><td>"</td><td>Double quote</td></tr>
+                        <tr><td>\\</td><td>\</td><td>Backslash</td></tr>
+                    </table>
+                    <p>The sequence \"  inserts a double quote in a <g>String</g>:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><g>String</g> txt = "We are\"Vikings\"north.";</h2>
+                    </nav>
+                    <table><tr><td>Code</td><td>Result</td></tr><tr><td>\n</td><td>New Line</td>	</tr><tr><td>\r</td><td>Carriage Return</td>	</tr><tr><td>\t</td><td>Tab	</td></tr><tr><td>\b</td><td>Backspace	</td></tr><tr><td>\f</td><td>Form Feed</td></tr>
+                    </table>
+                </div>
+            </section>
+            <section id="math">
+                <div>
+                    <h1>Java Math</h1>
+                    <p>The Java Math <g> class </g>has many methods that allows you to perform mathematical tasks on numbers.</p>
+                    <h1><g>Math.</g>max(x,y)</h1>
+                    <p>The <g>Math.</g>max(x,y) method can be used to find the highest value of x and y:</p>
+                    <nav class="code">
+                        <h2><g>Math.</g>min(5, 10);</h2>
+                    </nav>
+                    <h1><g>Math.</g>sqrt(x)</h1>
+                    <p>The <g>Math.</g>sqrt(x) method returns the square root of x:</p>
+                    <nav class="code">
+                        <h2><g>Math.</g>sqrt(64);</h2>
+                    </nav>
+                    <h1><g>Math.</g>abs(x)</h1>
+                    <p>The <g>Math.</g>abs(x) method returns the absolute (positive) value of x:</p>
+                    <nav class="code">
+                        <h2><g>Math.</g>abs(-4.7);</h2>
+                    </nav>
+                    <h1>Random Numbers</h1>
+                    <p><g>Math.</g>random() returns a random number between 0.0 (inclusive), and 1.0 (exclusive):</p>
+                    <nav class="code">
+                        <h2><g>Math.</g>random();</h2>
+                    </nav>
+                    <p>To get more control over the random number, for example, if you only want a random number between 0 and 100, you can use the following formula:</p>
+                    <nav class="code">
+                        <h2><v>int </v>randomNum = (int)(<g>Math.</g>random() * 101);<samp>// 0 to 100</samp></h2>
+                    </nav>
+                </div>
+            </section>
+            <section id="boolean">
+                <div>
+                    <h1><v>boolean </v>Values</h1>
+                    <p>A <v>boolean </v>type is declared with the <v>boolean </v>keyword and can only take the values true or false:</p>
+                    <nav class="code">
+                        <h2><v>boolean </v>isJavaFun = true;<br>
+                            <v>boolean </v>isFishTasty = false;<br>
+                            <g>System.</g><v>out.</v><s>println</s>(isJavaFun);<samp>// Outputs true</samp><br>                          <g>System.</g><v>out.</v><s>println</s>(isFishTasty);<samp>// Outputs false</samp></h2>
+                    </nav>
+                    <p>However, it is more common to return <v>boolean </v>values from <v>boolean </v>expressions, for conditional testing (see below).</p>
+                    <hr><br><br>
+                    <h1><v>boolean </v>Expression</h1>
+                    <p>A <v>boolean </v>expression returns a <v>boolean </v>value: true or false. <br><br>
+                        This is useful to build logic, and find answers. <br><br>
+                        For example, you can use a comparison operator, such as the greater than (>) operator, to find <br> <br> out if an expression (or a variable) is true or false:</p>
+                        <nav class="code">
+                            <h2><v>int </v>x = 10;<br>
+                                <v>int </v>y = 9;<br>
+                                <g>System.</g><v>out.</v><s>println</s>(x > y);<samp>// returns true, because 10 is higher than 9</samp>
+                                </h2>
+                                <p>Or even easier:</p>
+                                <h2><g>System.</g><v>out.</v><s>println</s>(10 > 9);<br><samp>// returns true, because 10 is higher than 9</samp></h2>
+                        </nav>
+                        <p>In the examples below, we use the equal to (==) operator to evaluate an expression:</p>
+                        <nav class="code">
+                            <h2><v>int </v>x = 10;<br>
+                                <g>System.</g><v>out.</v><s>println</s>(x == 10); <br><samp>// returns true, because the value of x is equal to 10</samp></h2>
+                        </nav>
+                        <nav class="code">
+                            <h2><g>System.</g><v>out.</v><s>println</s>(10 == 15);<br><samp> // returns false, because 10 is not equal to 15</samp></h2>
+                        </nav>
+                </div>
+            </section>
+            <section id="if-else">
+                <div>
+                    <h1>Java Conditions and If Statements</h1>
+                    <p>You already know that Java supports the usual logical conditions from mathematics:</p>
+                    <ul class="list">
+                        <li>Less than: a < b</li>
+                        <li>Less than or equal to: a <= b</li>
+                        <li>Greater than: a > b</li>
+                        <li>Greater than or equal to: a >= b</li>
+                        <li>Equal to a == b</li>
+                        <li>Not Equal to: a != b</li>
+                    </ul>
+                    <p>You can use these conditions to perform different actions for different decisions. <br><br>
+
+                        Java has the following conditional statements:</p>
+                    <ul>
+                        <li>Use if to specify a block of code to be executed, if a specified condition is true</li>
+                        <li>Use else to specify a block of code to be executed, if the same condition is false</li>
+                        <li>Use else if to specify a new condition to test, if the first condition is false</li>
+                        <li>Use switch to specify many alternative blocks of code to be executed</li>
+                    </ul><br>
+                    <hr><br><br>
+                    <h1>The if Statement</h1>
+                    <p>Use the if statement to specify a block of Java code to be executed if a condition is true</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2><f>if </f>(condition) { <br>
+                           <em>....</em> <samp>// block of code </samp><br>
+                          }</h2>
+                    </nav>
+                    <p>In the example below, we test two values to find out if 20 is greater than 18. If the condition <br><br> is true, print some text:</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2><f>if </f>(20 > 18) { <br>
+                           <em>....</em> <g>System.</g><v>out.</v><s>println</s>("20 is greater than 18"); <br>
+                          }</h2>
+                    </nav><br><br>
+                    <p>We can also test variables:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>int </v>x = 20; <br>
+                            <v>int </v>y = 18; <br>
+                            <f>if </f>(x > y) { <br>
+                            <em>....</em> <g>System.</g><v>out.</v><s>println</s>("x is greater than y"); <br>
+                            }</h2>
+                    </nav>
+                    <h3>Example explained</h3>
+                    <p>In the example above we use two variables, x and y, to test whether x is greater than y (using the > operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that "x is greater than y".</p>
+                    <hr><br><br>
+                    <h1>The else if Statement</h1>
+                    <p>Use the else if statement to specify a new condition if the first condition is false.</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2><f>if </f>(condition1) {<br>
+                            <samp>// block of code to be executed if condition1 is true</samp><br>
+                          } else <f>if </f>(condition2) { <br>
+                            <samp>// block of code to be executed if the condition1 is false and condition2 is true</samp><br>
+                          } <f>else </f> { <br>
+                            <samp>// block of code to be executed if the condition1 is false and condition2 is false</samp> <br>
+                          }</h2>
+                    </nav>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2><v>int </v>time = 22;<br>
+                            <f>if </f>(time < 10) {<br>
+                            <em>....</em>  <g>System.</g><v>out.</v><s>println</s>("Good morning.");<br>
+                            } else <f>if </f>(time < 18) {<br>
+                            <em>....</em> <g>System.</g><v>out.</v><s>println</s>("Good day.");<br>
+                            } <f>else </f> {<br>
+                            <em>.....</em> <g>System.</g><v>out.</v><s>println</s>("Good evening.");<br>
+                            }
+                            <samp>// Outputs "Good evening."</samp></h2>
+                    </nav>
+                    <h3>Example explained</h3>
+                    <p>In the example above, time (22) is greater than 10, so the first condition is false. The next condition, in the else if statement, is also false, so we move on to the else condition since condition1 and condition2 is both false - and print to the screen "Good evening".</p>
+                    <p>However, if the time was 14, our program would print "Good day."</p>
+                    <hr><br><br>
+                    <h1>Short Hand If...Else</h1>
+                    <p>There is also a short-hand if else, which is known as the ternary operator because it consists of three operands. <br><br>
+
+                        It can be used to replace multiple lines of code with a single line, and is most often used to replace simple if else statements:</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2>variable = (condition) ? expressionTrue :  expressionFalse;</h2>
+                    </nav><br><br><br>
+                    <nav class="code">
+                        <p>Instead of writing:</p>
+                        <h2><v>int </v>time = 20;<br>
+                            <f>if </f>(time < 18) {<br>
+                            <em>__</em><g>System.</g><v>out.</v><s>println</s>("Good day.");<br>
+                            } <f>else </f> {<br>
+                            <em>__</em> <g>System.</g><v>out.</v><s>println</s>("Good evening.");<br>
+                            }</h2>
+                            <p>You can simply write:</p>
+                            <h2><v>int </v>time = 20;<br>
+                                <g>String</g> result = <br>
+                                (time < 18) ? "Good day." : "Good evening.";<br>
+                                <g>System.</g><v>out.</v><s>println</s>(result);</h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Java Switch Statements</h1>
+                    <p>Instead of writing many if ..else statements, you can use the switch statement. <br><br><br>
+                    The switch statement selects one of many code blocks to be executed:</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2>switch(expression) { <br>
+                            <f>case </f>x: <br>
+                              <em>__</em> <samp>// code block</samp><br>
+                              <em>__</em> break;<br>
+                            <f>case </f>y: <br>
+                              <em>__</em> <samp>// code block</samp><br>
+                              <em>__</em> break; <br>
+                            default: <br>
+                              <em>__</em> <samp>// code block</samp><br>
+                          }</h2>
+                    </nav>
+                    <p>This is how it works:</p>
+                    <ul>
+                        <li>The switch expression is evaluated once.</li>
+                        <li>The value of the expression is compared with the values of each case .</li>
+                        <li>If there is a match, the associated block of code is executed.</li>
+                        <li>The break and default keywords are optional, and will be described later in this chapter</li>
+                    </ul>
+                    <p>The example below uses the weekday number to calculate the weekday name:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>
+                            <v>int </v>day = 4;
+switch (day) {<br>
+  <em>__</em> <f>case </f>1: <br>
+    <em>__</em> <g>System.</g><v>out.</v><s>println</s>("Monday"); <br>
+    <em>____</em> break; <br><br>
+  <em>__</em> <f>case </f>2: <br>
+    <em>__</em> <g>System.</g><v>out.</v><s>println</s>("Tuesday"); <br>
+    <em>____</em> break; <br><br>
+  <em>__</em> <f>case </f>3: <br>
+    <em>__</em> <g>System.</g><v>out.</v><s>println</s>("Wednesday"); <br>
+    <em>____</em> break; <br><br>
+  <em>__</em> <f>case </f>4: <br>
+    <em>__</em> <g>System.</g><v>out.</v><s>println</s>("Thursday"); <br>
+    <em>____</em> break; <br><br>
+  <em>__</em> <f>case </f>5: <br>
+    <em>__</em> <g>System.</g><v>out.</v><s>println</s>("Friday"); <br>
+    <em>____</em> break; <br><br>
+  <em>__</em> <f>case </f>6: <br>
+    <em>__</em> <g>System.</g><v>out.</v><s>println</s>("Saturday"); <br>
+    <em>____</em> break; <br><br>
+  <em>__</em> <f>case </f>7: <br>
+    <em>__</em> <g>System.</g><v>out.</v><s>println</s>("Sunday"); <br>
+    <em>____</em> break; <br><br>
+} <samp>// Outputs "Thursday" (day 4)</samp>
+                        </h2>
+                    </nav>
+                </div>
+            </section>
+            <section id="while-loop">
+                <div>
+                    <h1>Loops</h1>
+                    <p>Loops can execute a block of code as long as a specified condition is reached. <br><br><br>
+                        Loops are handy because they save time, reduce errors, and they make code more readable.</p>
+                    <h1>Java While Loop</h1>
+                    <p>The while loop loops through a block of code as long as a specified condition is true:</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2><f> while </f> (condition) {<br>
+                            <em>__</em><samp>// code block to be executed</samp><br>
+                          }</h2>
+                          <p>Example</p>
+                          <h2><v>int </v>i = 0;<br>
+                            <f> while </f> (i < 5) {<br>
+                            <em>___</em><g>System.</g><v>out.</v><s>println</s>(i);<br>
+                            <em>___</em>i++;<br>
+                            }</h2>
+                    </nav>
+                    <h3>Note: Do not forget to increase the variable used in the condition, otherwise the loop will never end!</h3>
+                    <hr><br><br><br>
+                    <h1>The Do/<f> while </f> Loop</h1>
+                    <p>The do/<f> while </f> loop is a variant of the <f> while </f> loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2><f> do </f> {<br>
+                            <samp>// code block to be executed</samp>
+                          } <br>
+                          <f> while </f> (condition);</h2>
+                          <p>The example below uses a do/<f> while </f> loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:</p>
+                        <h2><v>int </v>i = 0;<br>
+                            <f> do </f> {<br>
+                            <em>__</em> <g>System.</g><v>out.</v><s>println</s>(i);<br>
+                            <em>__</em> i++;<br>
+                            } <br>
+                            <f> while </f> (i < 5);</h2>      
+                    </nav>
+                    <h3>Do not forget to increase the variable used in the condition, otherwise the loop will never end!</h3>
+                </div>
+            </section>
+            <section id="for-loop">
+                <div>
+                    <h1>Java For Loop</h1>
+                    <p>When you know exactly how many times you want to loop through a block of code, use the for loop instead of a <f> while </f> loop:</p>
+                    <nav class="code">
+                        <p>Syntax</p>
+                        <h2><f> for </f> ( statement 1; statement 2; statement 3) { <br>
+                            <em>__</em><samp>// code block to be executed</samp><br>
+                          }</h2>
+                    </nav>
+                    <p><h3>Statement</h3> 1 is executed (one time) before the execution of the code block. <br>
+                        <h3>Statement</h3> 2 defines the condition for executing the code block. <br>
+                        <h3>Statement</h3> 3 is executed (every time) after the code block has been executed. <br>
+                        The example below will print the numbers 0 to 4:</p>
+                        <nav class="code">
+                            <p>Example</p>
+                            <h2><f> for </f> ( <v>int </v>i = 0; i < 5; i++) {<br>
+                               <em>__</em> <g>System.</g><v>out.</v><s>println</s>(i);<br>
+                              }</h2>
+                        </nav>
+                        <p>Example explained
+                            Statement 1 sets a variable before the loop starts (<v>int </v>i = 0). <br>
+                            Statement 2 defines the condition for the loop to run (i must be less than 5). If the <br> condition is true, the loop will start over again, if it is false, the loop will end. <br>
+                            Statement 3 increases a value (i++) each time the code block in the loop has been <br>  executed.</p>
+                            <h1>Another Example</h1>
+                            <p>This example will only print even values between 0 and 10;</p>
+                            <nav class="code">
+                                <h2><f> for </f> ( <v>int </v>i = 0; i <= 10; i = i + 2){ <br>
+                                    <em>__</em> <g>System.</g><v>out.</v><s>println</s>(i); <br>
+                                  }</h2>
+                            </nav>
+                            <hr><br><br>
+                            <h1>Nested Loops</h1>
+                            <p>It is also possible to place a loop inside another loop. This is called a nested loop. <br> The "inner loop" will be executed one time for each iteration of the "outer loop":</p>
+                            <nav class="code">
+                                <h2><samp>// Outer loop</samp><br>
+                                    <f> for </f> ( <v>int </v>i = 1; i <= 2; i++) { <br>
+                                    <em>__</em> <g>System.</g><v>out.</v><s>println</s>("Outer: " + i); <samp> // Executes 2 times</samp><br>
+                                      <br>
+                                      <samp>// Inner loop</samp> <br>
+                                      <f> for </f> ( <v>int </v>j = 1; j <= 3; j++) { <br>
+                                       <em>__</em> <g>System.</g><v>out.</v><s>println</s>(" Inner: " + j); <samp>// Executes 6 times (2 * 3)</samp><br>
+                                      } <br>
+                                    }</h2>
+                            </nav>
+                            <hr><br><br>
+                            <h1>For-Each Loop</h1>
+                            <p>There is also a "for-each" loop, which is used exclusively to loop through elements in an array:</p>
+                            <nav class="code">
+                                <h2><g>String</g>[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                                    <f> for </f> ( <g>String</g> i : cars) { <br>
+                                    <em>__</em><g>System.</g><v>out.</v><s>println</s>(i); <br>
+                                    }</h2>
+                            </nav>
+                            <h3>Note: Don't worry if you don't understand the example above. You will learn more about Arrays in the Java Arrays chapter.</h3>
+                            <hr><br><br>
+                            <h1>Java Break</h1>
+                            <p>You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch statement.The break statement can also be used to jump out of a loop.This example stops the loop when i is equal to 4:</p>
+                            <nav class="code">
+                                <h2><f> for </f> ( <v>int </v>i = 0; i < 10; i++) { <br>
+                                    <em>__</em><f>if </f>(i == 4) { <br>
+                                    <em>____</em>break; <br>
+                                    } <br>
+                                    <em>__</em> <g>System.</g><v>out.</v><s>println</s>(i);<br>
+                                  }</h2>
+                            </nav>
+                            <hr><br><br>
+                            <h1>Java Continue</h1>
+                            <p>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.This example skips the value of 4:</p>
+                            <nav class="code">
+                                <h2><f> for </f> ( <v>int </v>i = 0; i < 10; i++) { <br>
+                                    <em>__</em> <f>if </f>(i == 4) { <br>
+                                    <em>____</em>   continue; <br>
+                                    } <br>
+                                    <em>__</em> <g>System.</g><v>out.</v><s>println</s>(i); <br>
+                                  }</h2>
+                            </nav>
+                </div>
+            </section>
+            <section id="array">
+                <div>
+                    <h1>Java Arrays</h1>
+                    <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.To declare an array, define the variable type with square brackets:</p>
+                    <nav class="code">
+                        <h2><g>String</g>[] cars;</h2>
+                    </nav>
+                    <p>We have now declared a variable that holds an array of <g>String</g>s. To insert values to it, you can place the values in a comma-separated list, inside curly braces:</p>
+                    <nav class="code">
+                        <h2><g>String</g>[] cars = {"Volvo", "BMW", "Ford", "Mazda"};</h2>
+                    </nav>
+                    <p>To create an array of integers, you could write:</p>
+                    <nav class="code">
+                        <h2>int[] myNum = {10, 20, 30, 40};</h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Access the Elements of an Array</h1>
+                    <p>You can access an array element by referring to the index number. <br><br>This statement accesses the value of the first element in cars:</p>
+                    <nav class="code">
+                        <h2><g>String</g>[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                            <g>System.</g><v>out.</v><s>println</s>(cars[0]); <br>
+                        <samp>// Outputs Volvo</samp></h2>
+                    </nav><hr><br><br>
+                    <h1>Change an Array Element</h1>
+                    <p>To change the value of a specific element, refer to the index number:</p>
+                    <nav class="code">
+                        <h2>cars[0] = "Opel";</h2>
+                    </nav>
+                    <nav class="code">
+                        <h2><g>String</g>[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                            cars[0] = "Opel"; <br>
+                            <g>System.</g><v>out.</v><s>println</s>(cars[0]); <br>
+                            <samp>// Now outputs Opel instead of Volvo</samp>
+                            </h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Array Length</h1>
+                    <p>To find out how many elements an array has, use the length property:</p>
+                    <nav class="code">
+                        <h2><g>String</g>[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                            <g>System.</g><v>out.</v><s>println</s>(cars.length); <br>
+                            <samp>// Outputs 4</samp>
+                            </h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Loop Through an Array</h1>
+                    <p>You can loop through the array elements with the for loop, and use the length property to specify how many times the loop should run.The following example outputs all elements in the cars array:</p>
+                    <nav class="code">
+                        <h2><g>String</g>[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                            <f> for </f> ( <v>int </v>i = 0; i < cars.length; i++) { <br>
+                                <em>__</em> <g>System.</g><v>out.</v><s>println</s>(cars[i]); <br>
+                            }</h2><br><hr><br>
+                           <h2><g>String</g>[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+                            <f> for </f> ( <g>String</g> i : cars) { <br>
+                            <em>__</em> <g>System.</g><v>out.</v><s>println</s>(i); <br>
+                            }</h2>
+                            <p>The example above can be read like this: for each <g>String</g> element (called i - as in index) in cars, print out the value of i.
+                            If you compare the for loop and for-each loop, you will see that the for-each method is easier to write, it does not require a counter (using the length property), and it is more readable.
+                            </p>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Multidimensional Arrays</h1>
+                    <p>A multidimensional array is an array of arrays.
+                    Multidimensional arrays are useful when you want to store data as a tabular form, like a table with rows and columns.To create a two-dimensional array, add each array within its own set of curly braces:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <h2>int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };</h2>
+                        <h3>myNumbers is now an array with two arrays as its elements.</h3>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Access Elements</h1>
+                    <nav class="code">
+                        <h2>int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} }; <br>
+                            <g>System.</g><v>out.</v><s>println</s>(myNumbers[1][2]); <samp>// Outputs 7</samp></h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Loop Through a Multi-Dimensional Array</h1>
+                    <p>We can also use a for loop inside another for loop to get the elements of a two-dimensional array (we still have to po<v>int </v>to the two indexes):</p>
+                    <nav class="code">
+                        <h2><v>public </v><g> class </g>Main {
+                            <v>public </v>static <v> void </v> main(<g>String</g>[] args) { <br>
+                             <em>__</em> int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} }; <br>
+                             <em>____</em><f> for </f> ( <v>int </v>i = 0; i < myNumbers.length; ++i) { <br>
+                             <em>______</em>for(<v>int </v>j = 0; j < myNumbers[i].length; ++j) { <br>
+                             <em>________</em><g>System.</g><v>out.</v><s>println</s>(myNumbers[i][j]); <br>
+                             <em>______</em>} <br>
+                              <em>____</em>  } <br>
+                            <em>__</em> } <br>
+                          }</h2>
+                    </nav>
+                </div>
+            </section>
+            <section id="method">
+                <div>
+                    <h1>Java Methods</h1>
+                    <h4>A method is a block of code which only runs when it is called.You can pass data, known as parameters, into a method.Methods are used to perform certain actions, and they are also known as functions.Why use methods? To reuse code: define the code once, and use it many times.</h4>
+                    <hr><br><br>
+                    <h1>Create a Method</h1>
+                    <p>A method must be declared within a class. It is defined with the name of the method, followed by parentheses (). Java provides some pre-defined methods, such as <g>System.</g><v>out.</v><s>println</s>(), but you can also create your own methods to perform certain actions:</p>
+                    <nav class="code">
+                        <h3>Example</h3>
+                        <p>Create a method inside Main:</p>
+                        <h2><v>public </v><g> class </g>Main { <br>
+                            static <v> void </v> myMethod() { <br>
+                            <samp>// code to be executed</samp> <br>
+                            } <br>
+                          }</h2>
+                    </nav>
+                    <p>Example Explained</p>
+                    <ul>
+                        <li>myMethod() is the name of the method</li>
+                        <li>static means that the method belongs to the Main <g> class </g>and not an object of the Main class. You will learn more about objects and how to access methods through objects later in this tutorial.</li>
+                        <li>void means that this method does not have a return value. You will learn more about return values later in this chapter</li>
+                    </ul><hr><br><br>
+                    <h1>Call a Method</h1>
+                    <h4>To call a method in Java, write the method's name followed by two parentheses () and a semicolon;
+                        In the following example, myMethod() is used to print a text (the action), when it called:</h4>
+                        <nav class="code">
+                            <p>Inside main, call the myMethod() method:</p>
+                            <h2><v>public </v><g> class </g>Main { <br>
+                                static <v> void </v> myMethod() { <br>
+                                  <em>___</em> <g>System.</g><v>out.</v><s>println</s>("I just got executed!"); <br>
+                                } <br>
+                               <br>
+                                <v>public </v>static <v> void </v> main(<g>String</g>[] args) { <br>
+                                <em>___</em>  myMethod(); <br>
+                                } <br>
+                              } <br>
+                              
+                              <samp>// Outputs "I just got executed!"</samp></h2>
+                        </nav>
+                        <p>A method can also be called multiple times:</p>
+                        <nav class="code">
+                            <h2><v>public </v><g> class </g>Main { <br>
+                                static <v> void </v> myMethod() { <br>
+                                  <g>System.</g><v>out.</v><s>println</s>("I just got executed!"); <br>
+                                } <br>
+                               <br>
+                                <v>public </v>static <v> void </v> main(<g>String</g>[] args) { <br>
+                                 <em>__</em> myMethod(); <br>
+                                 <em>__</em> myMethod(); <br>
+                                 <em>__</em> myMethod(); <br>
+                                } <br>
+                              } <br>
+                              <samp>// I just got executed!</samp> <br>
+                              <samp>// I just got executed!</samp> <br>
+                              <samp>// I just got executed!</samp></h2>
+                        </nav>
+                        <hr><br><br>
+                        <h1>Parameters and Arguments</h1>
+                        <h4>Information can be passed to methods as parameter. Parameters act as variables inside the method.Parameters are specified after the method name, inside the parentheses. You can add as many parameters as you want, just separate them with a comma.The following example has a method that takes a <g>String</g> called fname as parameter.When the method is called, we pass along a first name, which is used inside the method to print the full name:</h4>
+                        <nav class="code">
+                            <h2><v>public </v><g> class </g>Main { <br>
+                                static <v> void </v> myMethod(<g>String</g> fname) { <br>
+                                <em>__</em> <g>System.</g><v>out.</v><s>println</s>(fname + " Refsnes"); <br>
+                                } <br>
+                               <br>
+                                <v>public </v>static <v> void </v> main(<g>String</g>[] args) { <br>
+                                 <em>__</em> myMethod("Liam"); <br>
+                                 <em>__</em> myMethod("Jenny"); <br>
+                                 <em>__</em> myMethod("Anja"); <br>
+                                } <br>
+                              } <br>
+                             <samp> // Liam Refsnes</samp><br>
+                              <samp>// Jenny Refsnes</samp><br>
+                              <samp>// Anja Refsnes </samp></h2>
+                        </nav>
+                        <hr><br><br>
+                        <h1>Multiple Parameters</h1>
+                        <p>You can have as many parameters as you like:</p>
+                        <nav class="code">
+                            <h2><v>public </v><g> class </g>Main { <br>
+                                static <v> void </v> myMethod(<g>String</g> fname, <v>int </v>age) {<br>
+                                <em>__</em>  <g>System.</g><v>out.</v><s>println</s>(fname + " is " + age);<br>
+                                }<br>
+                              <br>
+                                <v>public </v>static <v> void </v> main(<g>String</g>[] args) {<br>
+                                <em>__</em>myMethod("Liam", 5);<br>
+                                <em>__</em>myMethod("Jenny", 8);<br>
+                                <em>__</em>myMethod("Anja", 31);<br>
+                                }<br>
+                              }<br>
+                              
+                             <samp> // Liam is 5</samp><br>
+                              <samp>// Jenny is 8</samp><br>
+                              <samp>// Anja is 31</samp><br></h2>
+                        </nav>
+                        <hr><br><br>
+                        <h1>Return Values</h1>
+                        <p>The <v> void </v> keyword, used in the examples above, indicates that the method should not return a value. If you want the method to return a value, you can use a primitive data type (such as int, char, etc.) instead of void, and use the return keyword inside the method:</p>
+                        <nav class="code">
+                            <h2><v>public </v><g> class </g>Main { <br>
+                                static <v>int </v>myMethod(<v>int </v>x) { <br>
+                                <em>__</em> return 5 + x; <br>
+                                } <br>
+                               <br>
+                                <v>public </v>static <v> void </v> main(<g>String</g>[] args) { <br>
+                                <em>__</em><g>System.</g><v>out.</v><s>println</s>(myMethod(3)); <br>
+                                } <br>
+                              } <br>
+                              <samp>// Outputs 8 (5 + 3)</samp></h2>
+                        </nav>
+                        <p>This example returns the sum of a method's two parameters:</p>
+                        <nav class="code">
+                            <h2><v>public </v><g> class </g>Main { <br>
+                                static <v>int </v>myMethod(<v>int </v>x, <v>int </v>y) { <br>
+                                 <em>__</em> return x + y; <br>
+                                } <br>
+                               <br>
+                                <v>public </v>static <v> void </v> main(<g>String</g>[] args) { <br>
+                                 em__ <g>System.</g><v>out.</v><s>println</s>(myMethod(5, 3)); <br>
+                                } <br>
+                              } <br>
+                              <samp>// Outputs 8 (5 + 3)</samp></h2>
+                        </nav>
+                        <p>You can also store the result in a variable (recommended, as it is easier to read and maintain):</p>
+                        <nav class="code">
+                            <h2><v>public </v><g> class </g>Main { <br>
+                                static <v>int </v>myMethod(<v>int </v>x, <v>int </v>y) { <br>
+                                 <em>__</em> return x + y; <br>
+                                } <br>
+                               <br>
+                                <v>public </v>static <v> void </v> main(<g>String</g>[] args) { <br>
+                                 <em>___</em> <v>int </v>z = myMethod(5, 3); <br>
+                                 <em>___</em> <g>System.</g><v>out.</v><s>println</s>(z); <br>
+                                } <br>
+                              } <br>
+                              <samp>// Outputs 8 (5 + 3)</samp></h2>
+                        </nav>
+                        <hr><br><br>
+                        <h1>A Method with If...Else</h1>
+                        <p>It is common to use if...else statements inside methods:</p>
+                        <nav class="code">
+                            <h2><v>public </v><g> class </g>Main { <br>
+ <br>
+                                <samp>// Create a checkAge() method with an integer variable called age</samp> <br>
+                                static <v> void </v> checkAge(<v>int </v>age) { <br>
+                               <br>
+                                  <samp>// If age is less than 18, print "access denied"</samp> <br>
+                                 <em>__</em> <f>if </f>(age < 18) { <br>
+                                  <em>___</em>  <g>System.</g><v>out.</v><s>println</s>("Access denied - You are not old enough!"); <br>
+                               <br>
+                                <samp>// If age is greater than, or equal to, 18, print"access granted"</samp> <br>
+                                  } <f>else </f> { <br>
+                                  <em>___</em>  <g>System.</g><v>out.</v><s>println</s>("Access granted - You are old enough!"); <br>
+                                  } <br>
+                               <br>
+                                } <br>
+                               <br>
+                                <v>public </v>static <v> void </v> main(<g>String</g>[] args) { <br>
+                                  <em>__</em> checkAge(20); <samp>// Call the checkAge method and pass along an age of 20</samp> <br>
+                                } <br>
+                              } <br>
+                              
+                              <samp>// Outputs "Access granted - You are old enough!"</samp></h2>
+                        </nav>
+                </div>
+            </section>
+            <section id="method-overloading">
+                <div>
+                    <h1>Method Overloading</h1>
+                    <p>With method overloading, multiple methods can have the same name with different parameters:</p>
+                    <nav class="code">
+                        <h2><v>int </v>myMethod(<v>int </v>x) <br>
+                            <v>float </v>myMethod(<v>float </v>x) <br>
+                            double myMethod(double x, double y)</h2>
+                    </nav>
+                    <p>Consider the following example, which has two methods that add numbers of different type:</p>
+                    <nav class="code">
+                        <h2>static <v>int </v>plusMethodInt(<v>int </v>x, <v>int </v>y) { <br>
+                            return x + y; <br>
+                          } <br>
+                           <br>
+                          static double plusMethodDouble(double x, double y) { <br>
+                           <em>__</em> return x + y; <br>
+                          } <br>
+                           <br>
+                          <v>public </v>static <v> void </v> main(<g>String</g>[] args) { <br>
+                           <em>__</em> <v>int </v>myNum1 = plusMethodInt(8, 5); <br>
+                           <em>__</em> double myNum2 = plusMethodDouble(4.3, 6.26); <br>
+                           <em>__</em> <g>System.</g><v>out.</v><s>println</s>("int: " + myNum1); <br>
+                           <em>__</em> <g>System.</g><v>out.</v><s>println</s>("double: " + myNum2);
+                          }</h2>
+                    </nav>
+                    <h4>Instead of defining two methods that should do the same thing, it is better to overload one.
+
+                        In the example below, we overload the plusMethod method to work for both <v>int </v>and double:</h4>
+                    <nav class="code">
+                        <h2>static <v>int </v>plusMethod(<v>int </v>x, <v>int </v>y) { <br>
+                           <em>__</em> return x + y; <br>
+                          } <br>
+                           <br>
+                          static double plusMethod(double x, double y) { <br>
+                           <em>__</em> return x + y; <br>
+                          } <br>
+                           <br>
+                          <v>public </v>static <v> void </v> main(<g>String</g>[] args) { <br>
+                           <em>__</em> <v>int </v>myNum1 = plusMethod(8, 5); <br>
+                           <em>__</em> double myNum2 = plusMethod(4.3, 6.26); <br>
+                           <em>__</em> <g>System.</g><v>out.</v><s>println</s>("int: " + myNum1); <br>
+                           <em>__</em> <g>System.</g><v>out.</v><s>println</s>("double: " + myNum2);
+                          }</h2>
+                    </nav>
+                </div>
+            </section>
+            <section id="scoope">
+                <div>
+                    <h1>Java Scope</h1>
+                    <p>In Java, variables are only accessible inside the region they are created. This is called scope.</p>
+                    <hr><br><br>
+                    <h1>Method Scope</h1>
+                    <p>Variables declared directly inside a method are available anywhere in the method following the line of code in which they were declared:</p>
+                    <nav class="code">
+                        <h2>public class Main { <br>
+                            public static void main(String[] args) { <br>
+                          
+                              <samp>// Code here CANNOT use x</samp><br>
+                          
+                              int x = 100; <br>
+                          
+                              <samp>// Code here can use x</samp> <br>
+                              System.out.println(x); <br>
+                            } <br>
+                          }</h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Block Scope</h1>
+                    <p>A block of code refers to all of the code between curly braces {}.</p>
+                    <p>Variables declared inside blocks of code are only accessible by the code between the curly braces, which follows the line in which the variable was declared:</p>
+                    <nav class="code">
+                        <h2>public class Main { <br>
+                            public static void main(String[] args) { <br>
+                          
+                             <em>__</em> <samp>// Code here CANNOT use x</samp> <br>
+                          <em>__</em>
+                             <em>__</em> { <samp>// This is a block</samp> <br>
+                          <em>__</em>
+                             <em>__</em><br>
+                          <em>__</em>
+                             <em>__</em>   int x = 100; <br>
+                          <em>__</em>
+                             <em>__</em>   <samp>// Code here CAN use x</samp> <br>
+                             <em>__</em>   System.out.println(x); <br>
+                          <em>__</em>
+                              } <samp>// The block ends here</samp> <br>
+                          
+                            <samp>// Code here CANNOT use x</samp> <br>
+                          
+                            } <br>
+                          }
+                          </h2>
+                    </nav>
+                    <h3>A block of code may exist on its own or it can belong to an if, while or for statement. In the case of for statements, variables declared in the statement itself are also available inside the block's scope.</h3>
+                </div>
+            </section>
+            <section id="recursion">
+                <div>
+                    <h1>Java Recursion</h1>
+                    <p>Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.</p>
+                    <p>Recursion may be a bit difficult to understand. The best way to figure out how it works is to experiment with it.</p>
+                    <hr><br><br>
+                    <p>Adding two numbers together is easy to do, but adding a range of numbers is more complicated. In the following example, recursion is used to add a range of numbers together by breaking it down into the simple task of adding two numbers:</p>
+                    <nav class="code">
+                        <h3>Example</h3>
+                        <p>Use recursion to add all of the numbers up to 10.</p>
+                        <h2>public class Main { <br>
+                            public static void main(String[] args) { <br>
+                             <em>__</em> int result = sum(10); <br>
+                             <em>__</em> System.out.println(result); <br>
+                            } <br>
+                            public static int sum(int k) { <br>
+                              <em>__</em>if (k > 0) { <br>
+                              <em>____</em>return k + sum(k - 1); <br>
+                              <em>__</em>} else { <br>
+                              <em>____</em>return 0; <br>
+                              <em>__</em> } <br>
+                            } <br>
+                          }</h2>
+                    </nav>
+                    <h1>Example Explained</h1>
+                    <p>When the sum() function is called, it adds parameter k to the sum of all numbers smaller than k and returns the result. When k becomes 0, the function just returns 0. When running, the program follows these steps:</p>
+                    <h4>10 + sum(9)
+                        10 + ( 9 + sum(8) )
+                        10 + ( 9 + ( 8 + sum(7) ) )
+                        ...
+                        10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + sum(0)
+                        10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + 0</h4>
+                        <p>Since the function does not call itself when k is 0, the program stops there and returns the result.</p><hr><br><br>
+                        <h1>Halting Condition</h1>
+                        <p>Just as loops can run into the problem of infinite looping, recursive functions can run into the problem of infinite recursion. Infinite recursion is when the function never stops calling itself. Every recursive function should have a halting condition, which is the condition where the function stops calling itself. In the previous example, the halting condition is when the parameter k becomes 0.</p>
+                        <p>It is helpful to see a variety of different examples to better understand the concept. In this example, the function adds a range of numbers between a start and an end. The halting condition for this recursive function is when end is not greater than start:</p>
+                        <nav class="code">
+                            <p>Example</p>
+                            <p>Use recursion to add all of the numbers between 5 to 10</p>
+                            <h2><pre>
+public class Main {
+    public static void main(String[] args) {
+      int result = sum(5, 10);
+      System.out.println(result);
+    }
+    public static int sum(int start, int end) {
+      if (end > start) {
+        return end + sum(start, end - 1);
+      } else {
+        return end;
+      }
+    }
+  }
+                            </pre></h2>
+                        </nav>
+                        <h4>The developer should be very careful with recursion as it can be quite easy to slip into writing a function which never terminates, or one that uses excess amounts of memory or processor power. However, when written correctly recursion can be a very efficient and mathematically-elegant approach to programming.</h4>
+                </div>
+            </section>
+            <!-- finish java method -->
+            <section id="java-oop">
+                <div>
+                    <h1>Java - What is OOP?</h1>
+                    <p>OOP stands for Object-Oriented Programming</p>
+                    <p>Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.</p>
+                    <p>Object-oriented programming has several advantages over procedural programming:</p>
+                    <ul class="list">
+                        <li>pOOP is faster and easier to execute </li>
+                        <li>OOP provides a clear structure for the programs</li>
+                        <li>OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug</li>
+                        <li>OOP makes it possible to create full reusable applications with less code and shorter development time</li>
+                    </ul>
+                    <p>Tip: The "Don't Repeat Yourself" (DRY) principle is about reducing the repetition of code. You should extract out the codes that are common for the application, and place them at a single place and reuse them instead of repeating it</p>
+                    <hr><br><br>
+                    <h1>Java - What are Classes and Objects?</h1>
+                    <h4>Classes and objects are the two main aspects of object-oriented programming.
+
+                        Look at the following illustration to see the difference between class and objects:</h4>
+                    <div class="oop-ex">
+                        <div>
+                            <h1>Class</h1>
+                            <p>Fruit</p>
+                        </div>
+                        <div>
+                            <h1>objects</h1>
+                            <p>apple</p>
+                            <p>banana</p>
+                            <p>mango</p>
+                        </div>
+                    </div>
+                    <div class="oop-ex">
+                        <div>
+                            <h1>Class</h1>
+                            <p>Car</p>
+                        </div>
+                        <div>
+                            <h1>Objects</h1>
+                            <p>Volvo</p>
+                            <p>Dudi</p>
+                            <p>Toyota</p>
+                        </div>
+                    </div>
+                    <h4>So, a class is a template for objects, and an object is an instance of a class.When the individual objects are created, they inherit all the variables and methods from the class.You will learn much more about classes and objects in the next chapter.</h4>
+                </div>
+            </section>
+            <section id="class-object">
+                <div>
+                    <h1>Java Classes/Objects</h1>
+                    <p>Java is an object-oriented programming language.</p>
+                    <p>Everything in Java is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.</p>
+                    <p>A Class is like an object constructor, or a "blueprint" for creating objects.</p>
+                    <hr><br><br>
+                    <h1>Create a Class</h1>
+                    <p>To create a class, use the keyword class:</p>
+                    <nav class="code">
+                        <p>Create a class named "Main" with a variable x:</p>
+                        <h2>
+                            <pre>
+public class Main {
+    int x = 5;
+  }
+                            </pre>
+                        </h2>
+                    </nav>
+                    <p>Remember from the Java Syntax chapter that a class should always start with an uppercase first letter, and that the name of the java file should match the class name.</p>
+                    <hr><br><br>
+                    <h1>Create an Object</h1>
+                    <p>In Java, an object is created from a class. We have already created the class named Main, so now we can use this to create objects.</p>
+                    <p>To create an object of Main, specify the class name, followed by the object name, and use the keyword new:</p>
+                    <nav class="code">
+                        <p>Create an object called "myObj" and print the value of x:</p>
+                        <h2>
+                            <pre>
+public class Main {
+    int x = 5;
+  
+    public static void main(String[] args) {
+      Main myObj = new Main();
+      System.out.println(myObj.x);
+    }
+  }
+                            </pre>
+                        </h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Multiple Objects</h1>
+                    <p>You can create multiple objects of one class:</p>
+                    <nav class="code">
+                        <p>Create two objects of Main:</p>
+                        <h2>
+                            <pre>
+public class Main {
+    int x = 5;
+  
+    public static void main(String[] args) {
+      Main myObj1 = new Main();  <samp>// Object 1</samp>
+      Main myObj2 = new Main();  <samp>// Object 2</samp>
+      System.out.println(myObj1.x);
+      System.out.println(myObj2.x);
+    }
+  }
+                            </pre>
+                        </h2>
+                    </nav>
+                    <hr><br><br>
+                    <h1>Using Multiple Classes</h1>
+                    <p>You can also create an object of a class and access it in another class. This is often used for better organization of classes (one class has all the attributes and methods, while the other class holds the main() method (code to be executed)).</p>
+                    <p>Remember that the name of the java file should match the class name. In this example, we have created two files in the same directory/folder:</p>
+                    <ul class="list">
+                        <li>Main.java</li>
+                        <li>Second.java</li>
+                    </ul>
+                    <nav class="code">
+                        <p>Main.java</p>
+                        <h2>
+                            <pre>
+public class Main {
+    int x = 5;
+  }                                  
+                            </pre>
+                        </h2>
+                        <p>Second.java</p>
+                        <h2>
+                            <pre>
+class Second {
+    public static void main(String[] args) {
+      Main myObj = new Main();
+      System.out.println(myObj.x);
+    }
+  }
+                            </pre>
+                        </h2>
+                    </nav>
+                    <p>When both files have been compiled:</p>
+                    <div class="cli" style="width:100%">
+                        <span>C:\Users\Your Name>javac Main.java</span>
+                        <span>C:\Users\Your Name>javac Second.java</span>
+                    </div>
+                    <p>Run the Second.java file:</p>
+                    <div class="cli" style="width:100%">
+                        <span>C:\Users\Your Name>java Second</span>
+                    </div>
+                    <p>And the output will be:</p>
+                    <div class="cli" style="width:100%">
+                        <span> 5 </span>
+                    </div>
+                    <p>You will learn much more about classes and objects in the next chapters.</p>
+                </div>
+            </section>
+
+            <section id="oop-attribute">
+                <div>
+                    <h1>Java Class Attributes</h1>
+                    <p>In the previous chapter, we used the term "variable" for x in the example (as shown below). It is actually an attribute of the class. Or you could say that class attributes are variables within a class:</p>
+                    <nav class="code">
+                        <p>Create a class called "Main" with two attributes: x and y:</p>
+                        <h2>
+                            <pre>
+public class Main {
+    int x = 5;
+    int y = 3;
+  }
+                            </pre>
+                        </h2>
+                    </nav>
+                    <h4>Another term for class attributes is fields.</h4><hr><br><br>
+                    <h1>Accessing Attributes</h1>
+                    <p>You can access attributes by creating an object of the class, and by using the dot syntax (.):</p>
+                    <p>The following example will create an object of the Main class, with the name myObj. We use the x attribute on the object to print its value:</p>
+                    <nav class="code">
+                        <p>Create an object called "myObj" and print the value of x:</p>
+                        <h2>
+                            <pre>
+public class Main {
+    int x = 5;
+  
+    public static void main(String[] args) {
+      Main myObj = new Main();
+      System.out.println(myObj.x);
+    }
+  }
+                            </pre>
+                        </h2>
+                    </nav><hr><br><br>
+                    <h1>Modify Attributes</h1>
+                    <p>You can also modify attribute values:</p>
+                    <nav class="code">
+                        <p>Set the value of x to 40:</p>
+                        <h2>
+                            <pre>
+public class Main {
+    int x;
+  
+    public static void main(String[] args) {
+      Main myObj = new Main();
+      myObj.x = 40;
+      System.out.println(myObj.x);
+    }
+  }
+                            </pre>
+                        </h2>
+                        <h4>Or override existing values:</h4> <br>
+                        <p>Change the value of x to 25:</p>
+                        <h2>
+                            <pre>
+public class Main {
+    int x = 10;
+  
+    public static void main(String[] args) {
+      Main myObj = new Main();
+      myObj.x = 25; // x is now 25
+      System.out.println(myObj.x);
+    }
+  }
+                            </pre>
+                        </h2>
+                    </nav>
+                    <p>If you don't want the ability to override existing values, declare the attribute as final:</p>
+                    <nav class="code">
+                        <h2>
+                            <pre>
+
+public class Main {
+    final int x = 10;
+  
+    public static void main(String[] args) {
+      Main myObj = new Main();
+      myObj.x = 25; <samp>// will generate an error: cannot assign a value to a final variable</samp>
+      System.out.println(myObj.x);
+    }
+  }
+                            </pre>
+                        </h2>
+                    </nav>
+                    <h4>The final keyword is useful when you want a variable to always store the same value, like PI (3.14159...).
+
+                        The final keyword is called a "modifier". You will learn more about these in the Java Modifiers Chapter.</h4>
+                        <hr><br><br>
+                        <h1>Multiple Objects</h1>
+                        <p>If you create multiple objects of one class, you can change the attribute values in one object, without affecting the attribute values in the other:</p>
+                        <nav class="code">
+                            <p>Change the value of x to 25 in myObj2, and leave x in myObj1 unchanged:</p>
+                            <h2>
+                                <pre>
+public class Main {
+    int x = 5;
+  
+    public static void main(String[] args) {
+      Main myObj1 = new Main();  <samp>// Object 1</samp>
+      Main myObj2 = new Main();  <samp>// Object 2</samp>
+      myObj2.x = 25;
+      System.out.println(myObj1.x);  <samp>// Outputs 5</samp>
+      System.out.println(myObj2.x);  <samp>// Outputs 25</samp>
+    }
+  }    
+                                </pre>
+                            </h2>
+                        </nav><hr><br><br>
+                        <h1>Multiple Attributes</h1>
+                        <p>You can specify as many attributes as you want:</p>
+                        <nav class="code">
+                            <p>Example</p>
+                            <h2>
+                                <pre>
+public class Main {
+    String fname = "John";
+    String lname = "Doe";
+    int age = 24;
+  
+    public static void main(String[] args) {
+      Main myObj = new Main();
+      System.out.println("Name: " + myObj.fname + " " + myObj.lname);
+      System.out.println("Age: " + myObj.age);
+    }
+  }
+</pre>
+                            </h2>
+                        </nav>
+                        <h4>The next chapter will teach you how to create class methods and how to access them with objects.</h4>
+                </div>
+            </section>
+
+            <section id="oop-method">
+                <div>
+                    <h1>Java Class Methods</h1>
+                    <p>You learned from the Java Methods chapter that methods are declared within a class, and that they are used to perform certain actions:</p>
+                    <nav class="code">
+                        <p>Create a method named myMethod() in Main:</p>
+                        <h2>
+                            <pre>
+public class Main {
+    static void myMethod() {
+      System.out.println("Hello World!");
+    }
+  }
+                            </pre>
+                        </h2>
+                    </nav>
+                    <p>myMethod() prints a text (the action), when it is called. To call a method, write the method's name followed by two parentheses () and a semicolon;</p>
+                    <nav class="code">
+                        <p>Inside main, call myMethod():</p>
+                        <h2>
+                            <pre>
+public class Main {
+    static void myMethod() {
+      System.out.println("Hello World!");
+    }
+  
+    public static void main(String[] args) {
+      myMethod();
+    }
+  }
+  
+  <samp>// Outputs "Hello World!"</samp>
+                            </pre>
+                        </h2>
+                    </nav><hr><br><br>
+                    <h1>Static vs. Public</h1>
+                    <p>You will often see Java programs that have either static or public attributes and methods.</p>
+                    <p>In the example above, we created a static method, which means that it can be accessed without creating an object of the class, unlike public, which can only be accessed by objects:</p>
+                    <nav class="code">
+                        <p>An example to demonstrate the differences between static and public methods:</p>
+                        <h2>
+                            <pre>
+public class Main {
+    <samp>// Static method</samp>
+    static void myStaticMethod() {
+      System.out.println("Static methods can be called without creating objects");
+    }
+  
+    <samp>// Public method</samp>
+    public void myPublicMethod() {
+      System.out.println("Public methods must be called by creating objects");
+    }
+  
+    <samp>// Main method</samp>
+    public static void main(String[] args) {
+      myStaticMethod(); <samp>// Call the static method</samp>
+      <samp>// myPublicMethod(); This would compile an error</samp>
+  
+      Main myObj = new Main(); <samp>// Create an object of Main</samp>
+      myObj.myPublicMethod(); <samp> // Call the public method on the object</samp>
+    }
+  }
+                            </pre>
+                        </h2>
+                    </nav>
+                    <h4>Note: You will learn more about these keywords (called modifiers) in the Java Modifiers chapter.</h4>
+                    <hr><br><br>
+                    <h1>Access Methods With an Object</h1>
+                    <nav class="code">
+                        <p>Create a Car object named myCar. Call the fullThrottle() and speed() methods on the myCar object, and run the program:</p>
+                        <h2>
+                            <pre>
+<samp>// Create a Main class</samp>
+public class Main {
+ 
+<samp>// Create a fullThrottle() method</samp>
+  public void fullThrottle() {
+    System.out.println("The car is going as fast as it can!");
+  }
+
+<samp>// Create a speed() method and add a parameter</samp>
+  public void speed(int maxSpeed) {
+    System.out.println("Max speed is: " + maxSpeed);
+  }
+
+<samp>// Inside main, call the methods on the myCar object</samp>
+  public static void main(String[] args) {
+    Main myCar = new Main();<samp> // Create a myCar object</samp>
+    myCar.fullThrottle();<samp> // Call the fullThrottle() method</samp>
+    myCar.speed(200);<samp> // Create a myCar object</samp>
+  }
+}
+<samp>// The car is going as fast as it can!
+    // Max speed is: 200</samp>
+                            </pre>
+                        </h2>
+                    </nav>
+                    <h1>Example explained</h1>
+                    <h4>
+                        1) We created a custom Main class with the class keyword.
+                        
+                        2) We created the fullThrottle() and speed() methods in the Main class.
+                        
+                        3) The fullThrottle() method and the speed() method will print out some text, when they are called.
+                        
+                        4) The speed() method accepts an int parameter called maxSpeed - we will use this in 8).
+                        
+                        5) In order to use the Main class and its methods, we need to create an object of the Main Class.
+                        
+                        6) Then, go to the main() method, which you know by now is a built-in Java method that runs your program (any code inside main is executed).
+                        
+                        7) By using the new keyword we created an object with the name myCar.
+                        
+                        8) Then, we call the fullThrottle() and speed() methods on the myCar object, and run the program using the name of the object (myCar), followed by a dot (.), followed by the name of the method (fullThrottle(); and speed(200);). Notice that we add an int parameter of 200 inside the speed() method.</h4>
+                        <h3>Remember that..
+                            The dot (.) is used to access the object's attributes and methods.
+                            
+                            To call a method in Java, write the method name followed by a set of parentheses (), followed by a semicolon (;).
+                            
+                            A class must have a matching filename (Main and Main.java).</h3><hr><br><br>
+                        <h1>Using Multiple Classes</h1>
+                        <p>Like we specified in the Classes chapter, it is a good practice to create an object of a class and access it in another class.</p>
+                        <p>Remember that the name of the java file should match the class name. In this example, we have created two files in the same directory:</p>
+                        <ul>
+                            <li>Main.java</li>
+                            <li>Second.java</li>
+                        </ul>
+                        <nav class="code">
+                            <p>Main.java</p>
+                            <h2>
+                                <pre>
+public class Main {
+    public void fullThrottle() {
+      System.out.println("The car is going as fast as it can!");
+    }
+  
+    public void speed(int maxSpeed) {
+      System.out.println("Max speed is: " + maxSpeed);
+    }
+  }
+                                </pre>
+                            </h2><br><br><hr><br>
+                            <p>Second.java</p>
+                            <h2>
+                                <pre>
+class Second {
+    public static void main(String[] args) {
+      Main myCar = new Main(); <samp>// Create a myCar object</samp>
+      myCar.fullThrottle(); <samp>// Call the fullThrottle() method</samp>
+      myCar.speed(200); <samp>// Call the speed() method</samp>
+    }
+  }
+                                </pre>
+                            </h2>
+                        </nav>
+                        <p>When both files have been compiled:</p>
+                        <div class="cli" style="width:100%">
+                        <span>C:\Users\Your Name>javac Main.java</span>
+                        <span>C:\Users\Your Name>javac Second.java</span>
+                        </div>
+                        <p>Run the Second.java file:</p>
+                        <div class="cli" style="width:100%">
+                            <span>C:\Users\Your Name>java Second</span>
+                        </div>
+                        <p>And the output will be:</p>
+                        <div class="cli" style="width:100%">
+                        <span>The car is going as fast as it can!</span>
+                        <span>Max speed is: 200</span>
+                        </div>
+                </div>
+            </section>
+            <section id="constructor">
+                <div>
+                    <h1>Java Constructors</h1>
+                    <p>A constructor in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes:</p>
+                    <nav class="code">
+                        <p>Example</p>
+                        <p>Create a constructor:</p>
+                        <h2>
+                            <pre>
+// Create a Main class
+public class Main {
+  int x;  // Create a class attribute
+
+  // Create a class constructor for the Main class
+  public Main() {
+    x = 5;  // Set the initial value for the class attribute x
+  }
+
+  public static void main(String[] args) {
+    Main myObj = new Main(); // Create an object of class Main (This will call the constructor)
+    System.out.println(myObj.x); // Print the value of x
+  }
+}
+
+// Outputs 5
+                            </pre>
+                        </h2>
+                    </nav>
+                    <h4>Note that the constructor name must match the class name, and it cannot have a return type (like void).
+
+                        Also note that the constructor is called when the object is created.
+                        
+                        All classes have constructors by default: if you do not create a class constructor yourself, Java creates one for you. However, then you are not able to set initial values for object attributes.</h4>
+                        <h1>Constructor Parameters</h1>
+                        <p>Constructors can also take parameters, which is used to initialize attributes.
+
+                            The following example adds an int y parameter to the constructor. Inside the constructor we set x to y (x=y). When we call the constructor, we pass a parameter to the constructor (5), which will set the value of x to 5:</p>
+                            <nav class="code">
+                                <p>Example</p>
+                                <h2>
+                                    <pre>
+public class Main {
+    int x;
+  
+    public Main(int y) {
+      x = y;
+    }
+  
+    public static void main(String[] args) {
+      Main myObj = new Main(5);
+      System.out.println(myObj.x);
+    }
+  }
+  
+  // Outputs 5
+                                    </pre>
+                                </h2>
+                            </nav>
+                            <p>You can have as many parameters as you want:</p>
+                            <nav class="code">
+                                <p>Example</p>
+                                <h2><pre>
+public class Main {
+    int modelYear;
+    String modelName;
+  
+    public Main(int year, String name) {
+      modelYear = year;
+      modelName = name;
+    }
+  
+    public static void main(String[] args) {
+      Main myCar = new Main(1969, "Mustang");
+      System.out.println(myCar.modelYear + " " + myCar.modelName);
+    }
+  }
+  
+  // Outputs 1969 Mustang
+                                </pre></h2>
+                            </nav>
+
+                </div>
+            </section>
+    </div>
+</body>
+<script src="./main.js"></script>
+</html>
