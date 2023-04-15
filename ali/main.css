@@ -1,0 +1,168 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    overflow-x: hidden;
+    height: 1100px;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    background-color:white;
+}
+header{
+    background-color:rgb(83, 0, 179);
+    padding:2px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width:100vw;
+}
+.menu{
+    color : white;
+}
+.menu span{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top:13px;
+    padding-bottom:13px;
+    cursor:pointer;
+}
+.menu span:hover{
+    background-color:rgb(140, 56, 219)
+}
+.main-image{
+    width:100vw;
+    height: 250px;
+    background-image: url('./background.jpg');
+    padding-top:90px;
+}
+
+.product{
+    display:flex;
+    flex-direction:column;
+    background-color:#DDD;
+    padding-bottom: 30px;
+}
+.product div{
+    color:white;
+    font-size:25px;
+}
+.product-header{
+    background-color:#DDD;
+    width:100vw;
+    text-align: center;
+    padding:10px;
+    margin-top:30px;
+    font-size:20px;
+    font-family: 'Fredericka the Great', cursive;
+    text-shadow: 3px 2px 3px #ff0000;
+    color:rgb(0, 0, 255) !important;
+}
+.product-photos{
+    display:flex;
+    width:100vw;
+    height: 200px;
+    background-color: #DDD;
+    justify-content: center;
+    gap:20px;
+}
+.product-photo{
+    background-color:rgb(83, 0, 179);
+    width:31vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:30px;
+}
+.product-img{
+    width:100px;
+    height: 70px;
+    background-image: url("1-27\ best\ hair\ oils.webp");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-color:aquamarine;
+    margin-bottom:40px;
+    border-radius: 50%;
+}
+.product-data{
+    width:100vw;
+    background-color:#DDD;
+    margin-top:20px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.product-data .title{
+    /* background-color:rgb(83, 0, 179);    */
+    text-align: center;
+    padding:10px;
+    font-size:23px;
+    text-shadow: 3px 2px 3px #ff0000;
+    color:blue;
+}
+.product-data-header{
+    background-color:rgb(83, 0, 179);
+    padding:5px;
+    color:white;
+    display:flex;
+    justify-content: space-around;
+    width:80%;
+}
+.product-data-header span{
+    width:100%;
+    height: 100%;
+    background-color:rgb(83, 0, 179);
+    padding:5px;
+    text-align:center;
+}
+.product-data-table{
+    display:flex;
+    /* justify-content: space-around; */
+    width:80.7%;
+}
+.product-data-table span{
+    width:100%;
+    height: 100%;
+    border:2px solid rgb(83, 0, 179);
+    padding:5px;
+    text-align:center;
+}
+.total{
+    border:2px solid rgb(83, 0, 179);    
+    width:80.4%;
+    text-align: center;
+}
+.login{
+    /* display:none; */
+    background-color: rgb(83, 0, 179);
+    padding:40px;
+    display:flex;
+    flex-direction: column;
+    margin-left:50%;
+    transform:translateX(-50%);
+    font-size:26px;
+    width:30%;
+    border-radius: 20px;
+    display:none;
+    position:absolute;
+    top:20%;
+}
+.input1{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:stretch
+}
+.input1 input{
+    width:200px;
+    outline:2px rgb(83, 0, 179) solid;
+    padding:8px;
+}
+.input1 label{
+    color:white;
+}

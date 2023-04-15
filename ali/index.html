@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Ali</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M36.8 192H603.2c20.3 0 36.8-16.5 36.8-36.8c0-7.3-2.2-14.4-6.2-20.4L558.2 21.4C549.3 8 534.4 0 518.3 0H121.7c-16 0-31 8-39.9 21.4L6.2 134.7c-4 6.1-6.2 13.2-6.2 20.4C0 175.5 16.5 192 36.8 192zM64 224V384v80c0 26.5 21.5 48 48 48H336c26.5 0 48-21.5 48-48V384 224H320V384H128V224H64zm448 0V480c0 17.7 14.3 32 32 32s32-14.3 32-32V224H512z"/></svg></div>
+        <div class="menu">
+            <span id="home">Home</span>
+            <span>Product</span>
+            <span>About us</span>
+            <span style="margin-right:40px" id="login">Login</span>
+        </div>
+    </header>
+<div class="home">
+    <div class="main-image"></div>
+    <div class="product">
+        <div class="product-header">
+            Products
+        </div>
+        <div class="product-photos">
+            <div class="product-photo">
+                <div class="product-img"></div>
+                <div>oil for hair</div>
+            </div>
+            <div class="product-photo">
+                <div class="product-img"></div>
+                <div>oil for hair</div>
+            </div>
+            <div class="product-photo">
+                <div class="product-img">
+
+                </div>
+                <div>oil for hair</div>
+            </div>
+        </div>
+    </div>
+    <div class="product-data">
+        <div class="title">Product Data</div>
+        <div class="product-data-header">
+            <span>Product Name</span>
+            <span>Quality</span>
+            <span>Price</span>
+            <span>Notes</span>
+        </div>
+        <div class="product-data-table">
+            <span>Product Name1</span>
+            <span>2</span>
+            <span>50$</span>
+            <span>####</span>
+        </div>
+        <div class="product-data-table">
+            <span>Product Name1</span>
+            <span>2</span>
+            <span>50$</span>
+            <span>####</span>
+        </div>
+        <div class="product-data-table">
+            <span>Product Name1</span>
+            <span>2</span>
+            <span>50$</span>
+            <span>####</span>
+        </div>
+        <div class="product-data-table">
+            <span>Product Name1</span>
+            <span>2</span>
+            <span>50$</span>
+            <span>####</span>
+        </div>
+        <div class="product-data-table">
+            <span>Product Name1</span>
+            <span>2</span>
+            <span>50$</span>
+            <span>####</span>
+        </div>
+        <div class="product-data-table">
+            <span>Product Name1</span>
+            <span>2</span>
+            <span>50$</span>
+            <span>####</span>
+        </div>
+        <div class="product-data-table">
+            <span>Product Name1</span>
+            <span>2</span>
+            <span>50$</span>
+            <span>####</span>
+        </div>
+        <div class="total">
+            Total
+        </div>
+    </div>
+</div>
+<div class="login">
+    <form action="server.js">
+        <div class="input1">
+            <label for="name">UserName :</label>
+            <input type="text" name="name" placeholder="Enter your name">
+        </div>
+        <div class="input1">
+            <label for="email">Email :</label>
+            <input type="email" name="email" placeholder="Enter your email">
+        </div>
+        <div class="input1">
+            <label for="date">Date of blrth :</label>
+            <input type="date" name="date">
+        </div>
+        <div class="input1">
+            <label for="password">Password :</label>
+            <input type="password" placeholder="Enter your passwors" name="password">
+        </div>
+        <div class="input1">
+            <label for="age">Age :</label>
+            <input type="number" placeholder="Enter your Age">
+        </div>
+        <div class="input1">
+            <label for="family">Family Number :</label>
+            <input type="number" placeholder="Enter your family number">
+        </div>
+    </form>
+</div>
+</body>
+<script>
+    document.querySelector("#login").onclick = function(){
+        document.querySelector(".login").style.display = 'flex';
+        document.querySelector(".home").style.display = 'none';
+        document.body.style.height = '400px';
+    }
+    document.querySelector("#home").onclick = function(){
+        document.querySelector(".home").style.display = 'block';
+        document.querySelector(".login").style.display = 'none';
+        document.body.style.height = '1100px';
+    }
+</script>
+</html>

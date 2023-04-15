@@ -1,0 +1,350 @@
+html::-webkit-scrollbar{
+    width:0px;
+}
+:root{
+    --sec-color:linear-gradient(to right bottom , rgb(71, 0, 129) 10% 10% , rgb(0, 0, 245) 90% 90%);
+    --nav-color:linear-gradient(to bottom right , rgba(40, 65, 204, 0.534) , rgba(30, 30, 150, 0.575));;
+    --btn:rgb(0, 114, 114);
+    --btn-hover:rgb(51, 0, 99);
+    --dark-btn:linear-gradient(to bottom , rgb(34, 75, 255) , rgb(106, 0, 177));
+    --video:linear-gradient(to bottom right , rgb(86, 255, 241) 10% 10%, rgb(88, 88, 236) 90% 90%);
+}
+html{
+    scroll-behavior: smooth;
+}
+*::selection{
+    background-color: yellow;
+    color:black;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    direction: rtl;
+    color:white;
+}
+button , button a , a{
+    background-color: var(--btn);
+    padding:20px;
+    border:none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+button:hover , button a:hover , section a:hover{
+    background-color: var(--btn-hover);
+}
+a{
+    text-decoration: none;
+    border:none;
+    cursor: pointer;
+    font-size:20px;
+    border-radius: 20px;
+}
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    position:sticky;
+    top:0;
+    z-index:99;
+    background:var(--nav-color);
+}
+
+nav span img{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+}
+ul{
+    display:flex;
+    gap:15px;
+    overflow: hidden;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-name:expand;
+}
+li{
+    list-style: none;
+    cursor:pointer;
+    font-size:20px;
+    padding:10px;
+    transition:500ms;
+    color:white;
+}
+li:hover , li:active , li.li-active{
+    background-color:blue;
+    scale:1.2;
+}
+section{
+    display:none;
+    background:var(--sec-color);
+    overflow-x: hidden;
+    padding-bottom:70px;
+}
+.sec-active{
+    display:flex;
+    flex-direction: column;
+}
+#home{
+    overflow-x:hidden;
+    text-align: center;
+}
+#home div:not(.home-header){
+    padding:10px;
+}
+
+.home-header{
+    width:100dvw;
+    position: relative;
+}
+.home-header img{
+    width:100%;
+    height: 40dvh;
+    object-fit: cover;
+}
+.nav-icon{
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    padding:5px;
+    width:fit-content;
+    gap:5px;
+    display:none;
+    cursor:pointer;
+    border-radius: 50%;
+}
+.nav-icon span{
+    background-color: black;
+    width:30px;
+    height: 4px;
+}
+ul[expande = true]{
+    animation-name: expand;
+
+}
+ul[expanded = false]{
+    animation-name: unexpand;
+}
+
+@keyframes expand {
+    from { height: 50px; }
+    to { height: 400px; }
+  }
+@keyframes unexpand {
+    from { height: 400px; }
+    to { height: 50px; }
+  }
+.home-body1 h1{
+    color:rgb(237, 255, 156);
+    font-size:40px;
+}
+.home-body1 h4{
+    color:rgb(245, 255, 155)
+}
+.home-body1 h2{
+    color:yellow;
+}
+.home-body1 a{
+    background-color: rgb(0, 120, 156);
+    padding: 10px 30px;
+    width:30%;
+}
+.home-body1 a:hover{
+    background:var(--btn-hover);
+}
+.Aug-sec h1{
+    color:yellow;
+    font-size:35px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Aug-sec span{
+    color:white;
+    font-size:18px;
+}
+.Aug-sec button a{
+    font-size:18px;
+}
+#about{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+}
+#about div{
+    margin-top:40px;
+    font-size:20px;
+    padding:20px;
+    line-height: 1.3;
+}
+#about .right{
+    font-size:24px;
+}
+#about .left{
+    color:yellow;
+    line-height: 2;
+}
+#files{
+    text-align: center;
+}
+#files a{
+    padding:20px;
+}
+#files h1{
+    margin-top:20px;
+    color:yellow;
+    font-size:30px;
+}
+#files .first .term2{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    padding:40px;
+}
+footer{
+    background:var(--sec-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    gap:30px;
+}
+footer a{
+    padding:0;
+    background-color: transparent;
+}
+footer h4{
+    color:white;
+    font-size:20px;
+    text-align: center;
+}
+.media-app span a svg{
+    width:40px;
+    height: 40px;
+}
+.media-app{
+    display:flex;
+    gap:30px;
+}
+
+#courses{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:40px;
+    overflow:hidden;
+}
+#courses a{
+    margin-top:40px;
+    display: flex;
+    flex-direction: column;
+    background:var(--video);
+    width:340px;
+    height: 280px;
+    gap:20px;
+    position: relative;
+    padding:0;
+    text-align: center;
+}
+#courses a span{
+    font-size:13px;
+    font-weight: bold;
+}
+#contact form{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    width:100dvw;
+    justify-content: center;
+    padding:70px;
+}
+form input{
+    font-size:25px;
+    padding:10px 50px;
+    background-color: rgb(9, 2, 107);
+    border:none;
+}
+form textarea{
+    font-size:20px;
+    padding:10px;
+    background-color: rgb(2, 0, 141);
+}
+form button{
+    font-size:20px;
+    background-color:blue;
+}
+form button:hover{
+    background-color:rgb(15, 0, 151);
+}
+input[type=reset]{
+    cursor:pointer;
+}
+input:hover ,input:focus{
+    background-color:blue;
+    outline:none;
+}
+input:valid{
+    border:2px solid green;
+}
+input:invalid{
+    border:2px solid rgb(216, 44, 44);
+}
+/* finish the style for desktop and start mobile style */
+@media screen and (max-width:480px) {
+    a{
+        padding:10px;
+    }
+    .term2{
+        padding:4px;
+        gap:10px;
+    }
+    .fundumental{
+        padding:10px;
+    }
+    .fundumental div{
+        width: 100%;
+    }
+    nav ul{
+        display:flex;
+        flex-direction: column-reverse;
+        padding:16px;
+    }
+    .nav-icon{
+        display:flex;
+    }
+    #about{
+        flex-direction: column;
+    }
+    #about .left{
+        margin-top: 20px;
+        padding:8px;
+    }
+    .home-header div{
+        color:blue;
+        background-color:rgba(255, 255, 255, 0.384);
+        width:100%;
+        height: 100%;
+        position: absolute;
+        translate: 20% -50%;
+        top:50%;
+        right:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size:40px !important;
+    }
+    #courses{
+        padding:50px 0px;
+    }
+    #contact form{
+        padding:5px;
+    }
+    .media-app{
+        display:flex;
+        justify-content: space-around;
+        width:100dvw;
+        gap:0;
+    }
+}

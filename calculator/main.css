@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    cursor: pointer;
+    background-color: blue;
+    color:white;
+    padding:20px;
+    margin:1px;
+    border: 1px solid white;
+    font-weight: bold;
+    width:23%;
+    font-size:19px;
+}
+button:hover{
+    background-color: white;
+    color:blue;
+    border:1px solid blue;
+}
+.actions{
+    display: flex;
+    flex-direction: row;
+    width:300px;
+    flex-wrap:wrap
+}
+.result{
+    width:280px;
+    height: 50px;
+    background-color:aquamarine;
+    font-size:18px;
+    padding:10px;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:10em
+}
+@media only screen and (max-width:350px){
+    .container{
+        max-width:340px;
+    }
+    .result{
+        width: 250px;
+    }
+    button{
+        padding: 20px 15px;
+    }
+    .actions{
+        width:270px;
+    }
+}
